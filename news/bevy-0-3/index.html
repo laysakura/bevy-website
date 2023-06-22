@@ -24,11 +24,11 @@
             <div class="header__content">
                 <label class="main-menu-backdrop" for="mobile-menu-state"></label>
                 <label class="header__hamburger button-square button-square--header" for="mobile-menu-state">
-                    <img src="/assets/icon-hamburger.svg">
+                    <img src="/bevy-website/assets/icon-hamburger.svg">
                 </label>
                 <div class="header__left-block">
                     <a class="header__logo" href="/bevy-website/">
-                        <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                        <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                     </a>
                     <div class="header__message">
 
@@ -43,10 +43,10 @@
                     data-page-menu-switch-state-container>
                     <div class="main-menu__header">
                         <a href="/bevy-website/">
-                            <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                            <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                         </a>
                         <label class="button-square button-square--header" for="mobile-menu-state">
-                            <img src="/assets/icon-times.svg">
+                            <img src="/bevy-website/assets/icon-times.svg">
                         </label>
                     </div>
 
@@ -494,9 +494,9 @@
                 </nav>
                 <div class="header__cta-container">
                     <a class="button button--pink header__cta" href="/bevy-website/community/donate">Donate <img
-                            class="button__icon" src="/assets/heart.svg" alt="heart icon" /></a>
+                            class="button__icon" src="/bevy-website/assets/heart.svg" alt="heart icon" /></a>
                     <a class="header__cta header__cta--github" href="https://github.com/bevyengine/bevy">
-                        <img src="/assets/github-mark-white.svg" alt="GitHub repo">
+                        <img src="/bevy-website/assets/github-mark-white.svg" alt="GitHub repo">
                     </a>
                 </div>
             </div>
@@ -611,7 +611,8 @@
                                             System Improvements</a>
 
                                         <label class="tree-menu__toggle" for="news-menu-1-asset-system-improvements">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -783,7 +784,8 @@
                                             Improvements</a>
 
                                         <label class="tree-menu__toggle" for="news-menu-1-bevy-ecs-improvements">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -915,7 +917,8 @@
                                             Improvements</a>
 
                                         <label class="tree-menu__toggle" for="news-menu-1-mesh-improvements">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -1084,7 +1087,8 @@
                                             href="https://bevyengine.org/news/bevy-0-3/#change-log">Change Log</a>
 
                                         <label class="tree-menu__toggle" for="news-menu-1-change-log">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -1188,18 +1192,18 @@
                             <span class="news-social-links">
                                 (
 
-                                <img src="/assets/github_grey.svg" class="news-social-icon" /><span
+                                <img src="/bevy-website/assets/github_grey.svg" class="news-social-icon" /><span
                                     class="media-content">
                                     <a class="news-social-link" href="https://www.github.com/cart">@cart</a></span>
 
 
-                                <img src="/assets/twitter_grey.svg" class="news-social-icon" />
+                                <img src="/bevy-website/assets/twitter_grey.svg" class="news-social-icon" />
                                 <span class="media-content">
                                     <a class="news-social-link" href="https://www.twitter.com/cart_cart">@cart_cart</a>
                                 </span>
 
 
-                                <img src="/assets/youtube_grey.svg" class="news-social-icon" />
+                                <img src="/bevy-website/assets/youtube_grey.svg" class="news-social-icon" />
                                 <span class="media-content">
                                     <a class="news-social-link" href="https://www.youtube.com/cartdev">cartdev</a>
                                 </span>
@@ -1391,7 +1395,8 @@
                                 convenience (which causes &quot;hitching&quot;), and was incompatible with the new
                                 AssetLoader api. Asset loading is now always asynchronous. Users of
                                 <code>load_sync()</code> should instead <code>load()</code> their assets, check load
-                                status in their systems, and change game state accordingly.</p>
+                                status in their systems, and change game state accordingly.
+                            </p>
                             <h2 id="gltf-scene-loader">GLTF Scene Loader
                                 <a class="anchor-link" href="#gltf-scene-loader">#</a>
                             </h2>
@@ -1421,7 +1426,8 @@
                             </h3>
                             <p>In this release I finally was able to remove the one thing I <em>truly despised</em> in
                                 Bevy ECS. In previous versions of Bevy, iterating over the components in a
-                                <code>Query</code> looked like this:</p>
+                                <code>Query</code> looked like this:
+                            </p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-keyword z-control z-rust">for</span> <span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>a<span class="z-punctuation z-separator z-rust">,</span> b</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-keyword z-operator z-rust">in</span> <span class="z-keyword z-operator z-bitwise z-rust">&amp;</span><span class="z-storage z-modifier z-rust">mut</span> query<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">iter</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
     <span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> The `&amp;mut` here just felt so unnatural
 </span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
@@ -1458,7 +1464,8 @@
                                     choices that protect against unsafe memory access in a parallel environment.</li>
                                 <li><code>query.iter()</code> didn't actually return an iterator. It returned a
                                     <em>wrapper</em> that held an atomic lock on the component storages. The same was
-                                    true for the type returned by <code>query.entity()</code></li>
+                                    true for the type returned by <code>query.entity()</code>
+                                </li>
                                 <li>Removing these &quot;wrapper types&quot; would have allowed unsafe behavior because
                                     another Query could access the same components in a way that violated Rust's
                                     mutability rules.</li>
@@ -1468,7 +1475,8 @@
                             <p>Fortunately we finally found ways to solve all of these problems. The newly added
                                 <code>QuerySets</code> allow us to completely remove the locks (and wrapper types). And
                                 by completely rewriting <code>QueryIter</code> we were able to avoid the performance hit
-                                that removing the wrapper incurred. Read on for the details!</p>
+                                that removing the wrapper incurred. Read on for the details!
+                            </p>
                             <h3 id="100-lockless-parallel-ecs">100% Lockless Parallel ECS
                                 <a class="anchor-link" href="#100-lockless-parallel-ecs">#</a>
                             </h3>
@@ -1488,7 +1496,8 @@
                             <p>The locks ensured that the second <code>q1.get_mut(some_entity)</code> access panicked,
                                 keeping us nice and safe. In <strong>Bevy 0.3</strong>, a system like
                                 <code>conflicting_query_system</code> will fail when the schedule is constructed. By
-                                default, <em>systems cannot have conflicting queries</em>.</p>
+                                default, <em>systems cannot have conflicting queries</em>.
+                            </p>
                             <p>However there are some cases where a system <em>needs</em> conflicting queries to do what
                                 it needs to do. For these cases, we added <code>QuerySets</code>:</p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-meta z-function z-rust"><span class="z-meta z-function z-rust"><span class="z-storage z-type z-function z-rust">fn</span> </span><span class="z-entity z-name z-function z-rust">system</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-begin z-rust">(</span><span class="z-storage z-modifier z-rust">mut</span> <span class="z-variable z-parameter z-rust">queries</span><span class="z-punctuation z-separator z-rust">:</span> <span class="z-meta z-generic z-rust">QuerySet<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-meta z-generic z-rust">Query<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-keyword z-operator z-rust">&amp;</span><span class="z-storage z-modifier z-rust">mut</span> A<span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span>, <span class="z-meta z-generic z-rust">Query<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-keyword z-operator z-rust">&amp;</span><span class="z-storage z-modifier z-rust">mut</span> A, <span class="z-keyword z-operator z-rust">&amp;</span>B<span class="z-punctuation z-section z-group z-end z-rust">)</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span><span class="z-punctuation z-section z-group z-end z-rust">)</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-end z-rust">)</span></span></span></span><span class="z-meta z-function z-rust"> </span><span class="z-meta z-function z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
@@ -1504,7 +1513,8 @@
                             <p>Because of this, we were able to remove <em>all</em> safety checks from
                                 <code>query.iter()</code> and <code>query.get(entity)</code>, which means these methods
                                 are now <em>exactly</em> as fast as their <code>World</code> counterparts (which we made
-                                lock-free in Bevy 0.2).</p>
+                                lock-free in Bevy 0.2).
+                            </p>
                             <h3 id="performance-improvements">Performance Improvements
                                 <a class="anchor-link" href="#performance-improvements">#</a>
                             </h3>
@@ -1548,7 +1558,8 @@
                                 case:</p>
                             <ul>
                                 <li>bevy (world): Direct <code>World</code> access using
-                                    <code>world.get_mut::&lt;A&gt;(entity)</code></li>
+                                    <code>world.get_mut::&lt;A&gt;(entity)</code>
+                                </li>
                                 <li>bevy (system): A system containing a <code>Query&lt;&amp;mut A&gt;</code> that
                                     accesses the component using <code>query.get_mut(entity)</code></li>
                                 <li>legion (world): Direct <code>World</code> access using
@@ -1562,7 +1573,8 @@
                                 of <code>query.get(entity)</code> does require safety checks, for the same reason the
                                 legion entry api does. We cannot know ahead of time what component type a caller will
                                 pass into the method, which means we <em>must</em> check it to make sure it matches the
-                                <code>Query</code>.</p>
+                                <code>Query</code>.
+                            </p>
                             <p>Additionally, here are some relevant <a
                                     href="https://github.com/rust-gamedev/ecs_bench_suite">ecs_bench_suite</a> results
                                 (omitted benchmarks had no significant change):</p>
@@ -1608,11 +1620,13 @@
                             <p>First, to improve clarity we renamed <code>query.get::&lt;Component&gt;(entity)</code> to
                                 <code>query.get_component::&lt;Component&gt;(entity)</code>. We now return the
                                 &quot;full&quot; query result for a specific entity using
-                                <code>query.get(entity)</code>.</p>
+                                <code>query.get(entity)</code>.
+                            </p>
                             <p>To allow multiple concurrent reads of Queries (where it is safe), we added separate
                                 <code>query.iter()</code> and <code>query.iter_mut()</code> apis, as well as
                                 <code>query.get(entity)</code> and <code>query.get_mut(entity)</code>. Queries that are
-                                &quot;read only&quot; can now retrieve their results via an immutable borrow.</p>
+                                &quot;read only&quot; can now retrieve their results via an immutable borrow.
+                            </p>
                             <h2 id="mesh-improvements">Mesh Improvements
                                 <a class="anchor-link" href="#mesh-improvements">#</a>
                             </h2>
@@ -1625,7 +1639,8 @@
                                 things, but there are a number of cases that require other attributes, such as
                                 &quot;vertex colors&quot; or &quot;bone weights for animation&quot;. <strong>Bevy
                                     0.3</strong> adds support for custom vertex attributes. Meshes can define whatever
-                                attributes they want and shaders can consume whatever attributes they want!</p>
+                                attributes they want and shaders can consume whatever attributes they want!
+                            </p>
                             <p><a
                                     href="https://github.com/bevyengine/bevy/blob/v0.3.0/examples/shader/mesh_custom_attribute.rs">Here
                                     is an example</a> that illustrates how to define a custom shader that consumes a
@@ -1640,7 +1655,8 @@
                                 vertex information. Bevy used to hard code the precision of these indices to
                                 <code>u16</code>, which was too small for some cases. Now render pipelines can
                                 &quot;specialize&quot; based on a configured index buffer, which now defaults to
-                                <code>u32</code> to cover most use cases.</p>
+                                <code>u32</code> to cover most use cases.
+                            </p>
                             <h2 id="transform-re-rewrite">Transform Re-Rewrite
                                 <a class="anchor-link" href="#transform-re-rewrite">#</a>
                             </h2>
@@ -1656,7 +1672,8 @@
                                 made the user-facing api/dataflow simpler, as well as the underlying implementation. The
                                 <code>Transform</code> component was backed by a 4x4 matrix. I pressed the big green
                                 &quot;merge&quot; button ... happy that we had solved the Transform problem once and for
-                                all!</p>
+                                all!
+                            </p>
                             <p>It turns out there was still more work to be done! <a
                                     href="https://github.com/bevyengine/bevy/issues/229#issuecomment-698953161">@AThilenius
                                     pointed out</a> that using a 4x4 matrix as the source of truth for an affine
@@ -1868,7 +1885,8 @@ app<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-su
                                         <code>query.entity()</code> and <code>query.get()</code></a>
                                     <ul>
                                         <li><code>query.get::&lt;Component&gt;(entity)</code> is now
-                                            <code>query.get_component::&lt;Component&gt;(entity)</code></li>
+                                            <code>query.get_component::&lt;Component&gt;(entity)</code>
+                                        </li>
                                         <li><code>query.entity(entity)</code> is now <code>query.get(entity)</code></li>
                                     </ul>
                                 </li>
@@ -1903,7 +1921,8 @@ app<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-su
                                             will be converted to linear sRGB.</li>
                                         <li>New methods <code>Color::rgb_linear</code> and
                                             <code>Color::rgba_linear</code> will accept colors already in linear sRGB
-                                            (the old behavior)</li>
+                                            (the old behavior)
+                                        </li>
                                         <li>Individual color-components must now be accessed through setters and
                                             getters.</li>
                                     </ul>
@@ -1912,17 +1931,20 @@ app<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-su
                                         with custom vertex attributes</a>
                                     <ul>
                                         <li>Any vertex attribute can now be added over
-                                            <code>mesh.attributes.insert()</code>.</li>
+                                            <code>mesh.attributes.insert()</code>.
+                                        </li>
                                         <li>See <code>example/shader/mesh_custom_attribute.rs</code></li>
                                         <li>Removed <code>VertexAttribute</code>, <code>Vertex</code>,
-                                            <code>AsVertexBufferDescriptor</code>.</li>
+                                            <code>AsVertexBufferDescriptor</code>.
+                                        </li>
                                         <li>For missing attributes (requested by shader, but not defined by mesh), Bevy
                                             will provide a zero-filled fallback buffer.</li>
                                     </ul>
                                 </li>
                                 <li>Despawning an entity multiple times causes a debug-level log message to be emitted
                                     instead of a panic: <a href="https://github.com/bevyengine/bevy/pull/649">#649</a>,
-                                    <a href="https://github.com/bevyengine/bevy/pull/651">#651</a></li>
+                                    <a href="https://github.com/bevyengine/bevy/pull/651">#651</a>
+                                </li>
                                 <li><a href="https://github.com/bevyengine/bevy/pull/692">Migrated to Rodio 0.12</a>
                                     <ul>
                                         <li>New method of playing audio can be found in the examples.</li>

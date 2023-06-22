@@ -15,7 +15,7 @@
   <link href="/bevy-website/atom.xml" rel="alternate" type="application/atom+xml" />
   <title>0.8 to 0.9</title>
 
-  <script src="/optional-helpers.js"></script>
+  <script src="/bevy-website/optional-helpers.js"></script>
 
 </head>
 
@@ -26,11 +26,11 @@
       <div class="header__content">
         <label class="main-menu-backdrop" for="mobile-menu-state"></label>
         <label class="header__hamburger button-square button-square--header" for="mobile-menu-state">
-          <img src="/assets/icon-hamburger.svg">
+          <img src="/bevy-website/assets/icon-hamburger.svg">
         </label>
         <div class="header__left-block">
           <a class="header__logo" href="/bevy-website/">
-            <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+            <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
           </a>
           <div class="header__message">
 
@@ -45,10 +45,10 @@
           data-page-menu-switch-state-container>
           <div class="main-menu__header">
             <a href="/bevy-website/">
-              <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+              <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
             </a>
             <label class="button-square button-square--header" for="mobile-menu-state">
-              <img src="/assets/icon-times.svg">
+              <img src="/bevy-website/assets/icon-times.svg">
             </label>
           </div>
 
@@ -359,9 +359,9 @@
         </nav>
         <div class="header__cta-container">
           <a class="button button--pink header__cta" href="/bevy-website/community/donate">Donate <img
-              class="button__icon" src="/assets/heart.svg" alt="heart icon" /></a>
+              class="button__icon" src="/bevy-website/assets/heart.svg" alt="heart icon" /></a>
           <a class="header__cta header__cta--github" href="https://github.com/bevyengine/bevy">
-            <img src="/assets/github-mark-white.svg" alt="GitHub repo">
+            <img src="/bevy-website/assets/github-mark-white.svg" alt="GitHub repo">
           </a>
         </div>
       </div>
@@ -647,7 +647,8 @@
                     <a class="anchor-link" href="#plugins-own-their-settings-rework-plugingroup-trait">#</a>
                   </h3>
                   <p>The <code>WindowDescriptor</code> settings have been moved from a resource to
-                    <code>WindowPlugin::window</code>:</p>
+                    <code>WindowPlugin::window</code>:
+                  </p>
                   <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> Old (Bevy 0.8)
 </span>app
   <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">insert_resource</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>WindowDescriptor <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
@@ -666,7 +667,8 @@
 </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
 </span></code></pre>
                   <p>The <code>AssetServerSettings</code> resource has been removed in favor of direct
-                    <code>AssetPlugin</code> configuration:</p>
+                    <code>AssetPlugin</code> configuration:
+                  </p>
                   <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> Old (Bevy 0.8)
 </span>app
   <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">insert_resource</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>AssetServerSettings <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
@@ -739,7 +741,8 @@
 </span>app<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">add_plugins</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>DefaultPlugins<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">set</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-meta z-path z-rust">ImagePlugin<span class="z-punctuation z-accessor z-rust">::</span></span>default_nearest<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
 </span></code></pre>
                   <p>The <code>DefaultTaskPoolOptions</code> settings have been moved from a resource to
-                    <code>CorePlugin::task_pool_options</code>:</p>
+                    <code>CorePlugin::task_pool_options</code>:
+                  </p>
                   <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> Old (Bevy 0.8)
 </span>app
   <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">insert_resource</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-meta z-path z-rust">DefaultTaskPoolOptions<span class="z-punctuation z-accessor z-rust">::</span></span>with_num_threads<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-constant z-numeric z-integer z-decimal z-rust">4</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
@@ -853,13 +856,17 @@
                   </h3>
                   <ul>
                     <li>Replace <code>Timer::new(duration, false)</code> with
-                      <code>Timer::new(duration, TimerMode::Once)</code>.</li>
+                      <code>Timer::new(duration, TimerMode::Once)</code>.
+                    </li>
                     <li>Replace <code>Timer::new(duration, true)</code> with
-                      <code>Timer::new(duration, TimerMode::Repeating)</code>.</li>
+                      <code>Timer::new(duration, TimerMode::Repeating)</code>.
+                    </li>
                     <li>Replace <code>Timer::from_seconds(seconds, false)</code> with
-                      <code>Timer::from_seconds(seconds, TimerMode::Once)</code>.</li>
+                      <code>Timer::from_seconds(seconds, TimerMode::Once)</code>.
+                    </li>
                     <li>Replace <code>Timer::from_seconds(seconds, true)</code> with
-                      <code>Timer::from_seconds(seconds, TimerMode::Repeating)</code>.</li>
+                      <code>Timer::from_seconds(seconds, TimerMode::Repeating)</code>.
+                    </li>
                     <li>Change <code>timer.repeating()</code> to <code>timer.mode() == TimerMode::Repeating</code>.</li>
                   </ul>
                   <h3 id="add-global-time-scaling"><a href="https://github.com/bevyengine/bevy/pull/5752">Add global
@@ -869,7 +876,8 @@
                   <p>Some <code>Time</code> methods were renamed for consistency.</p>
                   <p>The values returned by most methods are now scaled by a value optionally set with
                     <code>set_relative_speed</code>. Most systems should continue to use these scaled values. If you
-                    need unscaled time, use the new methods prefixed with <code>raw_</code>.</p>
+                    need unscaled time, use the new methods prefixed with <code>raw_</code>.
+                  </p>
                   <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> Old (Bevy 0.8)
 </span><span class="z-storage z-type z-rust">let</span> dur<span class="z-punctuation z-separator z-rust">:</span> Duration <span class="z-keyword z-operator z-assignment z-rust">=</span> time<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">time_since_startup</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-terminator z-rust">;</span>
 <span class="z-storage z-type z-rust">let</span> secs<span class="z-punctuation z-separator z-rust">:</span> <span class="z-storage z-type z-rust">f32</span> <span class="z-keyword z-operator z-assignment z-rust">=</span> time<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">time_since_startup</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">as_secs_f32</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-terminator z-rust">;</span>
@@ -897,7 +905,8 @@
                   <p><code>UiColor</code> has been renamed to <code>BackgroundColor</code>. This change affects
                     <code>NodeBundle</code>, <code>ButtonBundle</code> and <code>ImageBundle</code>. In addition, the
                     corresponding field on <code>ExtractedUiNode</code> has been renamed to
-                    <code>background_color</code> for consistency.</p>
+                    <code>background_color</code> for consistency.
+                  </p>
                   <h3 id="make-the-default-background-color-of-nodebundle-transparent"><a
                       href="https://github.com/bevyengine/bevy/pull/6211">Make the default background color of
                       <code>NodeBundle</code> transparent</a>
@@ -922,7 +931,8 @@
                     <a class="anchor-link" href="#clarify-bevy-ui-node-field-and-documentation">#</a>
                   </h3>
                   <p>All references to the old <code>size</code> name has been changed, to access
-                    <code>bevy::ui::Node</code> <code>size</code> field use <code>calculated_size</code></p>
+                    <code>bevy::ui::Node</code> <code>size</code> field use <code>calculated_size</code>
+                  </p>
                   <h3 id="remove-size-and-uirect-generics"><a href="https://github.com/bevyengine/bevy/pull/5404">Remove
                       <code>Size</code> and <code>UiRect</code> generics</a>
                     <a class="anchor-link" href="#remove-size-and-uirect-generics">#</a>
@@ -935,7 +945,8 @@
                     <a class="anchor-link" href="#remove-margins-rs">#</a>
                   </h3>
                   <p>The <code>Margins</code> type got removed. To migrate you just have to change every occurrence of
-                    <code>Margins</code> to <code>UiRect</code>.</p>
+                    <code>Margins</code> to <code>UiRect</code>.
+                  </p>
                   <h3 id="move-size-to-bevy-ui"><a href="https://github.com/bevyengine/bevy/pull/4285">Move
                       <code>Size</code> to <code>bevy_ui</code></a>
                     <a class="anchor-link" href="#move-size-to-bevy-ui">#</a>
@@ -1034,7 +1045,8 @@
                     <code>GamepadEvent</code> and <code>GamepadEventRaw</code> types are now normal structs instead of
                     tuple structs and have a <code>new()</code> function. To migrate change every instantiation to use
                     the <code>new()</code> function instead and use the appropriate field names instead of
-                    <code>.0</code> and <code>.1</code>.</p>
+                    <code>.0</code> and <code>.1</code>.
+                  </p>
                   <h3 id="add-getters-and-setters-for-inputaxis-and-buttonsettings"><a
                       href="https://github.com/bevyengine/bevy/pull/6088">Add getters and setters for
                       <code>InputAxis</code> and <code>ButtonSettings</code></a>
@@ -1060,7 +1072,8 @@
                     <li>Pattern matches on <code>GamepadEventType::Connected</code> will need to be updated, as the form
                       of the variant has changed.</li>
                     <li>Code that requires <code>GamepadEvent</code>, <code>GamepadEventRaw</code> or
-                      <code>GamepadEventType</code> to be <code>Copy</code> will need to be updated.</li>
+                      <code>GamepadEventType</code> to be <code>Copy</code> will need to be updated.
+                    </li>
                   </ul>
                   <h3 id="gamepad-type-is-copy-do-not-require-return-references-to-it-in-gamepads-api"><a
                       href="https://github.com/bevyengine/bevy/pull/5296"><code>Gamepad</code> type is
@@ -1072,7 +1085,8 @@
                     <li><code>Gamepads::iter</code> now returns an iterator of <code>Gamepad</code>. rather than an
                       iterator of <code>&amp;Gamepad</code>.</li>
                     <li><code>Gamepads::contains</code> now accepts a <code>Gamepad</code>, rather than a
-                      <code>&amp;Gamepad</code>.</li>
+                      <code>&amp;Gamepad</code>.
+                    </li>
                   </ul>
                   <h3 id="update-wgpu-to-0-14-0-naga-to-0-10-0-winit-to-0-27-4-raw-window-handle-to-0-5-0-ndk-to-0-7"><a
                       href="https://github.com/bevyengine/bevy/pull/6218">Update <code>wgpu</code> to 0.14.0,
@@ -1083,7 +1097,8 @@
                   </h3>
                   <p>Adjust usage of <code>bevy_window::WindowDescriptor</code>’s <code>cursor_locked</code> to
                     <code>cursor_grab_mode</code>, and adjust its type from <code>bool</code> to
-                    <code>bevy_window::CursorGrabMode</code>.</p>
+                    <code>bevy_window::CursorGrabMode</code>.
+                  </p>
                   <h3 id="support-monitor-selection-for-all-window-modes"><a
                       href="https://github.com/bevyengine/bevy/pull/5878">Support monitor selection for all window
                       modes.</a>
@@ -1118,7 +1133,8 @@
                   <p>The <code>.chain(handler_system)</code> method on systems is now
                     <code>.pipe(handler_system)</code>.
                     The <code>IntoChainSystem</code> trait is now <code>IntoPipeSystem</code>, and the
-                    <code>ChainSystem</code> struct is now <code>PipeSystem</code>.</p>
+                    <code>ChainSystem</code> struct is now <code>PipeSystem</code>.
+                  </p>
                   <h3 id="add-associated-constant-identity-to-transform-and-friends"><a
                       href="https://github.com/bevyengine/bevy/pull/5340">Add associated constant <code>IDENTITY</code>
                       to <code>Transform</code> and friends.</a>
@@ -1126,7 +1142,8 @@
                   </h3>
                   <p>The method <code>identity()</code> on <code>Transform</code>, <code>GlobalTransform</code> and
                     <code>TransformBundle</code> has been removed.
-                    Use the associated constant <code>IDENTITY</code> instead.</p>
+                    Use the associated constant <code>IDENTITY</code> instead.
+                  </p>
                   <h3 id="rename-transform-mul-vec3-to-transform-point-and-improve-docs"><a
                       href="https://github.com/bevyengine/bevy/pull/6132">Rename <code>Transform::mul_vec3</code> to
                       <code>transform_point</code> and improve docs</a>
@@ -1154,21 +1171,24 @@
                     <a class="anchor-link" href="#replace-worldquerygats-trait-with-actual-gats">#</a>
                   </h3>
                   <p>Replace usage of <code>WorldQueryGats</code> assoc types with the actual gats on
-                    <code>WorldQuery</code> trait</p>
+                    <code>WorldQuery</code> trait
+                  </p>
                   <h3 id="add-a-method-for-accessing-the-width-of-a-table"><a
                       href="https://github.com/bevyengine/bevy/pull/6249">Add a method for accessing the width of a
                       <code>Table</code></a>
                     <a class="anchor-link" href="#add-a-method-for-accessing-the-width-of-a-table">#</a>
                   </h3>
                   <p>Any use of <code>Table::len</code> should now be <code>Table::entity_count</code>. Any use of
-                    <code>Table::capacity</code> should now be <code>Table::entity_capacity</code>.</p>
+                    <code>Table::capacity</code> should now be <code>Table::entity_capacity</code>.
+                  </p>
                   <h3 id="make-handle-t-field-id-private-and-replace-with-a-getter"><a
                       href="https://github.com/bevyengine/bevy/pull/6176">Make <code>Handle::&lt;T&gt;</code> field id
                       private, and replace with a getter</a>
                     <a class="anchor-link" href="#make-handle-t-field-id-private-and-replace-with-a-getter">#</a>
                   </h3>
                   <p>If you were accessing the value <code>handle.id</code>, you can now do so with
-                    <code>handle.id()</code></p>
+                    <code>handle.id()</code>
+                  </p>
                   <h3 id="add-timeupdatestrategy-resource-for-manual-time-updating"><a
                       href="https://github.com/bevyengine/bevy/pull/6159">Add <code>TimeUpdateStrategy</code> resource
                       for manual <code>Time</code> updating</a>
@@ -1208,7 +1228,8 @@ app
                   </h3>
                   <p>Remove references to <code>bevy_render::camera::DepthCalculation</code>, such as
                     <code>use bevy_render::camera::DepthCalculation</code>. Remove <code>depth_calculation</code> fields
-                    from Projections.</p>
+                    from Projections.
+                  </p>
                   <h3 id="make-raw-window-handle-field-in-window-and-extractedwindow-an-option"><a
                       href="https://github.com/bevyengine/bevy/pull/6114">Make <code>raw_window_handle</code> field in
                       <code>Window</code> and <code>ExtractedWindow</code> an <code>Option</code>.</a>
@@ -1216,7 +1237,8 @@ app
                       href="#make-raw-window-handle-field-in-window-and-extractedwindow-an-option">#</a>
                   </h3>
                   <p><code>Window::raw_window_handle()</code> now returns
-                    <code>Option&lt;RawWindowHandleWrapper&gt;</code>.</p>
+                    <code>Option&lt;RawWindowHandleWrapper&gt;</code>.
+                  </p>
                   <h3 id="fix-inconsistent-children-removal-behavior"><a
                       href="https://github.com/bevyengine/bevy/pull/6017">Fix inconsistent children removal behavior</a>
                     <a class="anchor-link" href="#fix-inconsistent-children-removal-behavior">#</a>
@@ -1240,7 +1262,8 @@ app
                   </h3>
                   <p><code>len</code> is no longer implemented for <code>QueryCombinationIter</code>. You can get the
                     same value with <code>size_hint().0</code>, but be aware that values exceeding
-                    <code>usize::MAX</code> will be returned as <code>usize::MAX</code>.</p>
+                    <code>usize::MAX</code> will be returned as <code>usize::MAX</code>.
+                  </p>
                   <h3 id="query-filter-types-must-be-readonlyworldquery"><a
                       href="https://github.com/bevyengine/bevy/pull/6008"><code>Query</code> filter types must be
                       <code>ReadOnlyWorldQuery</code></a>
@@ -1249,20 +1272,23 @@ app
                   <p>Query filter (<code>F</code>) generics are now bound by <code>ReadOnlyWorldQuery</code>, rather
                     than <code>WorldQuery</code>. If for some reason you were requesting
                     <code>Query&lt;&amp;A, &amp;mut B&gt;</code>, please use
-                    <code>Query&lt;&amp;A, With&lt;B&gt;&gt;</code> instead.</p>
+                    <code>Query&lt;&amp;A, With&lt;B&gt;&gt;</code> instead.
+                  </p>
                   <h3 id="add-pop-method-for-list-trait"><a href="https://github.com/bevyengine/bevy/pull/5797">Add
                       <code>pop</code> method for <code>List</code> trait.</a>
                     <a class="anchor-link" href="#add-pop-method-for-list-trait">#</a>
                   </h3>
                   <p>Any custom type that implements the <code>List</code> trait will now need to implement the
-                    <code>pop</code> method.</p>
+                    <code>pop</code> method.
+                  </p>
                   <h3 id="remove-an-outdated-workaround-for-impl-trait"><a
                       href="https://github.com/bevyengine/bevy/pull/5659">Remove an outdated workaround for
                       <code>impl Trait</code></a>
                     <a class="anchor-link" href="#remove-an-outdated-workaround-for-impl-trait">#</a>
                   </h3>
                   <p>The methods <code>Schedule::get_stage</code> and <code>get_stage_mut</code> now accept
-                    <code>impl StageLabel</code> instead of <code>&amp;dyn StageLabel</code>.</p>
+                    <code>impl StageLabel</code> instead of <code>&amp;dyn StageLabel</code>.
+                  </p>
                   <h3 id="add-a-change-detection-bypass-and-manual-control-over-change-ticks"><a
                       href="https://github.com/bevyengine/bevy/pull/5635">Add a change detection bypass and manual
                       control over change ticks</a>
@@ -1270,7 +1296,8 @@ app
                       href="#add-a-change-detection-bypass-and-manual-control-over-change-ticks">#</a>
                   </h3>
                   <p>Add the <code>Inner</code> associated type and new methods to any type that you’ve implemented
-                    <code>DetectChanges</code> for.</p>
+                    <code>DetectChanges</code> for.
+                  </p>
                   <h3 id="make-internal-struct-shaderdata-non-pub"><a
                       href="https://github.com/bevyengine/bevy/pull/5609">Make internal struct <code>ShaderData</code>
                       non-<code>pub</code></a>
@@ -1284,7 +1311,8 @@ app
                     <a class="anchor-link" href="#make-children-constructor-pub-crate">#</a>
                   </h3>
                   <p><code>Children::with()</code> is now renamed <code>Children::from_entities()</code> and is now
-                    <code>pub(crate)</code></p>
+                    <code>pub(crate)</code>
+                  </p>
                   <h3 id="rename-handle-as-weak-to-cast-weak"><a
                       href="https://github.com/bevyengine/bevy/pull/5321">Rename Handle::as_weak() to cast_weak()</a>
                     <a class="anchor-link" href="#rename-handle-as-weak-to-cast-weak">#</a>
@@ -1309,7 +1337,8 @@ app
                   <p>It might be possible for references to <code>Local</code>s without <code>T: FromWorld</code> to
                     exist, but these should be exceedingly rare and probably dead code. In the event that one of these
                     is encountered, the easiest solutions are to delete the code or wrap the inner <code>T</code> in an
-                    <code>Option</code> to allow it to be default constructed to <code>None</code>.</p>
+                    <code>Option</code> to allow it to be default constructed to <code>None</code>.
+                  </p>
                   <p>This may also have other smaller implications (such as <code>Debug</code> representation), but
                     serialization is probably the most prominent.</p>
                   <h3 id="swap-out-num-cpus-for-std-thread-available-parallelism"><a
@@ -1321,7 +1350,8 @@ app
                     been removed. <code>logical_core_count</code> has been replaced with
                     <code>bevy_tasks::available_parallelism</code>, which works identically. If
                     <code>bevy_tasks::physical_core_count</code> is required, the <code>num_cpus</code> crate can be
-                    used directly, as these two were just aliases for <code>num_cpus</code> APIs.</p>
+                    used directly, as these two were just aliases for <code>num_cpus</code> APIs.
+                  </p>
                   <h3 id="changed-diagnostics-from-seconds-to-milliseconds"><a
                       href="https://github.com/bevyengine/bevy/pull/5554">Changed diagnostics from seconds to
                       milliseconds</a>
@@ -1363,7 +1393,8 @@ app
                   </h3>
                   <p>Resources have been moved to <code>Resources</code> under <code>Storages</code> in
                     <code>World</code>. All code dependent on <code>Archetype::unique_components(_mut)</code> should
-                    access it via <code>world.storages().resources()</code> instead.</p>
+                    access it via <code>world.storages().resources()</code> instead.
+                  </p>
                   <p>All APIs accessing the raw data of individual resources (mutable <em>and</em> read-only) have been
                     removed as these APIs allowed for unsound unsafe code. All usages of these APIs should be changed to
                     use <code>World::{get, insert, remove}_resource</code>.</p>
@@ -1380,7 +1411,8 @@ app
                   </h3>
                   <p>The <code>ElementState</code> type received a rename and is now called <code>ButtonState</code>. To
                     migrate you just have to change every occurrence of <code>ElementState</code> to
-                    <code>ButtonState</code>.</p>
+                    <code>ButtonState</code>.
+                  </p>
                   <h3 id="fix-incorrect-and-unnecessary-normal-mapping-code"><a
                       href="https://github.com/bevyengine/bevy/pull/5766">Fix incorrect and unnecessary normal-mapping
                       code</a>
@@ -1550,7 +1582,8 @@ app
                       <code>Reflect</code> trait rather than being treated as a value type. For code that relies on the
                       <code>Input&lt;T&gt;</code> struct being treated as a value type by reflection, it is still
                       possible to wrap the <code>Input&lt;T&gt;</code> type with a wrapper struct and apply
-                      <code>#[reflect_value]</code> to it.</li>
+                      <code>#[reflect_value]</code> to it.
+                    </li>
                     <li>As a reminder, private fields exposed via reflection are not subject to any stability
                       guarantees.</li>
                   </ul>
@@ -1593,7 +1626,8 @@ app
                   <p><code>.register_type</code> for generic types like <code>Option&lt;T&gt;</code>,
                     <code>Vec&lt;T&gt;</code>, <code>HashMap&lt;K, V&gt;</code> will no longer insert
                     <code>ReflectSerialize</code> and <code>ReflectDeserialize</code> type data. Instead you need to
-                    register it separately for concrete generic types like so:</p>
+                    register it separately for concrete generic types like so:
+                  </p>
                   <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust">  <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-meta z-path z-rust">register_type<span class="z-punctuation z-accessor z-rust">::</span></span><span class="z-meta z-generic z-rust"><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-meta z-generic z-rust"><span class="z-support z-type z-rust">Option</span><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-support z-type z-rust">String</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
   <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-meta z-path z-rust">register_type_data<span class="z-punctuation z-accessor z-rust">::</span></span><span class="z-meta z-generic z-rust"><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-meta z-generic z-rust"><span class="z-support z-type z-rust">Option</span><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-support z-type z-rust">String</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span>, ReflectSerialize<span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
   <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-meta z-path z-rust">register_type_data<span class="z-punctuation z-accessor z-rust">::</span></span><span class="z-meta z-generic z-rust"><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-meta z-generic z-rust"><span class="z-support z-type z-rust">Option</span><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-support z-type z-rust">String</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span>, ReflectDeserialize<span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
@@ -1603,9 +1637,11 @@ app
                     <a class="anchor-link" href="#utility-methods-for-val">#</a>
                   </h3>
                   <p>It is no longer possible to use the <code>+</code>, <code>+=</code>, <code>-</code>, or
-                    <code>-=</code> operators with <code>Val</code> or <code>Size</code>.</p>
+                    <code>-=</code> operators with <code>Val</code> or <code>Size</code>.
+                  </p>
                   <p>Use the new <code>try_add</code> and <code>try_sub</code> methods instead and perform operations on
-                    <code>Size</code>'s <code>height</code> and <code>width</code> fields separately.</p>
+                    <code>Size</code>'s <code>height</code> and <code>width</code> fields separately.
+                  </p>
                   <h3 id="allow-passing-glam-vector-types-as-vertex-attributes"><a
                       href="https://github.com/bevyengine/bevy/pull/6442">Allow passing glam vector types as vertex
                       attributes</a>
@@ -1616,7 +1652,8 @@ app
                     removed.
                     I you're passing either <code>Vec&lt;[u16; 4]&gt;</code> or <code>Vec&lt;[u8; 4]&gt;</code> into
                     <code>Mesh::insert_attribute</code> it will now require wrapping it with right the
-                    <code>VertexAttributeValues</code> enum variant.</p>
+                    <code>VertexAttributeValues</code> enum variant.
+                  </p>
                 </div>
                 <div class="docs-footer">
                   <nav class="docs-footer__nav">

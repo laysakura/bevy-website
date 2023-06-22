@@ -16,7 +16,7 @@
     <link href="/bevy-website/atom.xml" rel="alternate" type="application/atom+xml" />
     <title>0.5 to 0.6</title>
 
-    <script src="/optional-helpers.js"></script>
+    <script src="/bevy-website/optional-helpers.js"></script>
 
 </head>
 
@@ -27,11 +27,11 @@
             <div class="header__content">
                 <label class="main-menu-backdrop" for="mobile-menu-state"></label>
                 <label class="header__hamburger button-square button-square--header" for="mobile-menu-state">
-                    <img src="/assets/icon-hamburger.svg">
+                    <img src="/bevy-website/assets/icon-hamburger.svg">
                 </label>
                 <div class="header__left-block">
                     <a class="header__logo" href="/bevy-website/">
-                        <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                        <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                     </a>
                     <div class="header__message">
 
@@ -46,10 +46,10 @@
                     data-page-menu-switch-state-container>
                     <div class="main-menu__header">
                         <a href="/bevy-website/">
-                            <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                            <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                         </a>
                         <label class="button-square button-square--header" for="mobile-menu-state">
-                            <img src="/assets/icon-times.svg">
+                            <img src="/bevy-website/assets/icon-times.svg">
                         </label>
                     </div>
 
@@ -360,9 +360,9 @@
                 </nav>
                 <div class="header__cta-container">
                     <a class="button button--pink header__cta" href="/bevy-website/community/donate">Donate <img
-                            class="button__icon" src="/assets/heart.svg" alt="heart icon" /></a>
+                            class="button__icon" src="/bevy-website/assets/heart.svg" alt="heart icon" /></a>
                     <a class="header__cta header__cta--github" href="https://github.com/bevyengine/bevy">
-                        <img src="/assets/github-mark-white.svg" alt="GitHub repo">
+                        <img src="/bevy-website/assets/github-mark-white.svg" alt="GitHub repo">
                     </a>
                 </div>
             </div>
@@ -667,7 +667,8 @@
                                     <p>Note that &quot;virtual Cargo workspaces&quot; still need to manually define
                                         <code>resolver = &quot;2&quot;</code>, even in Rust 2021. <a
                                             href="https://doc.rust-lang.org/edition-guide/rust-2021/default-cargo-resolver.html#details">Refer
-                                            to the Rust 2021 documentation</a> for details.</p>
+                                            to the Rust 2021 documentation</a> for details.
+                                    </p>
                                     <pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-punctuation z-definition z-table z-begin z-toml">[</span><span class="z-meta z-tag z-table z-toml"><span class="z-entity z-name z-table z-toml">workspace</span></span><span class="z-punctuation z-definition z-table z-end z-toml">]</span>
 <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">resolver</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>2<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span> <span class="z-comment z-line z-number-sign z-toml"><span class="z-punctuation z-definition z-comment z-toml">#</span> Important! wgpu/Bevy needs this!</span>
 <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">members</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-punctuation z-definition z-array z-begin z-toml">[</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>my_crate1<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-array z-toml">,</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>my_crate2<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span> <span class="z-punctuation z-definition z-array z-end z-toml">]</span>
@@ -918,7 +919,8 @@
                                         <a class="anchor-link" href="#calling-system-on-a-system-is-now-optional">#</a>
                                     </h3>
                                     <p>When adding a system to Bevy it is no longer necessary to call
-                                        <code>.system()</code> beforehand.</p>
+                                        <code>.system()</code> beforehand.
+                                    </p>
                                     <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> 0.5
 </span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-rust"><span class="z-storage z-type z-function z-rust">fn</span> </span><span class="z-entity z-name z-function z-rust">main</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-begin z-rust">(</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-end z-rust">)</span></span></span></span><span class="z-meta z-function z-rust"> </span><span class="z-meta z-function z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
     <span class="z-meta z-path z-rust">App<span class="z-punctuation z-accessor z-rust">::</span></span>new<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
@@ -936,7 +938,8 @@
 </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span>
 </span></code></pre>
                                     <p>System configuration Functions like <code>.label()</code> or
-                                        <code>.config()</code> can now also be directly called on a system.</p>
+                                        <code>.config()</code> can now also be directly called on a system.
+                                    </p>
                                     <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> 0.5
 </span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-rust"><span class="z-storage z-type z-function z-rust">fn</span> </span><span class="z-entity z-name z-function z-rust">main</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-begin z-rust">(</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-end z-rust">)</span></span></span></span><span class="z-meta z-function z-rust"> </span><span class="z-meta z-function z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
     <span class="z-meta z-path z-rust">App<span class="z-punctuation z-accessor z-rust">::</span></span>new<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>

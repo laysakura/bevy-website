@@ -16,7 +16,7 @@
     <link href="/bevy-website/atom.xml" rel="alternate" type="application/atom+xml" />
     <title>0.4 to 0.5</title>
 
-    <script src="/optional-helpers.js"></script>
+    <script src="/bevy-website/optional-helpers.js"></script>
 
 </head>
 
@@ -27,11 +27,11 @@
             <div class="header__content">
                 <label class="main-menu-backdrop" for="mobile-menu-state"></label>
                 <label class="header__hamburger button-square button-square--header" for="mobile-menu-state">
-                    <img src="/assets/icon-hamburger.svg">
+                    <img src="/bevy-website/assets/icon-hamburger.svg">
                 </label>
                 <div class="header__left-block">
                     <a class="header__logo" href="/bevy-website/">
-                        <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                        <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                     </a>
                     <div class="header__message">
 
@@ -46,10 +46,10 @@
                     data-page-menu-switch-state-container>
                     <div class="main-menu__header">
                         <a href="/bevy-website/">
-                            <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                            <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                         </a>
                         <label class="button-square button-square--header" for="mobile-menu-state">
-                            <img src="/assets/icon-times.svg">
+                            <img src="/bevy-website/assets/icon-times.svg">
                         </label>
                     </div>
 
@@ -360,9 +360,9 @@
                 </nav>
                 <div class="header__cta-container">
                     <a class="button button--pink header__cta" href="/bevy-website/community/donate">Donate <img
-                            class="button__icon" src="/assets/heart.svg" alt="heart icon" /></a>
+                            class="button__icon" src="/bevy-website/assets/heart.svg" alt="heart icon" /></a>
                     <a class="header__cta header__cta--github" href="https://github.com/bevyengine/bevy">
-                        <img src="/assets/github-mark-white.svg" alt="GitHub repo">
+                        <img src="/bevy-website/assets/github-mark-white.svg" alt="GitHub repo">
                     </a>
                 </div>
             </div>
@@ -868,7 +868,8 @@ timer<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-
 </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span>
 </span></code></pre>
                                     <p>You no longer need two system parameters to read your events. One
-                                        <code>EventReader</code> is sufficient.</p>
+                                        <code>EventReader</code> is sufficient.
+                                    </p>
                                     <p>Following the above example of using an <code>EventReader</code> to read events,
                                         you can now use <code>EventWriter</code> to create new ones.</p>
                                     <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> 0.4
@@ -947,13 +948,15 @@ timer<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-
                                         the <code>State</code> resource and registers a &quot;driver&quot; system that
                                         takes the
                                         place of <code>StateStage</code>. States are registered using
-                                        <code>SystemSet</code>.</p>
+                                        <code>SystemSet</code>.
+                                    </p>
                                     <p><strong>IMPORTANT</strong>: if you stop registering the <code>StateStage</code>
                                         but don't
                                         register the driver (using <code>add_state</code> or
                                         <code>State::get_driver</code>), Bevy
                                         0.5 will enter an infinite loop, causing your application to &quot;lock
-                                        up&quot;.</p>
+                                        up&quot;.
+                                    </p>
                                     <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> 0.4
 </span>app<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">insert_resource</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-meta z-path z-rust">State<span class="z-punctuation z-accessor z-rust">::</span></span>new<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-meta z-path z-rust">MyState<span class="z-punctuation z-accessor z-rust">::</span></span>InitState</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
    <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">add_stage_after</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>
@@ -1014,7 +1017,8 @@ timer<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-
                                     </h3>
                                     <p><code>Camera3dBundle</code> is now known as <code>PerspectiveCameraBundle</code>,
                                         and <code>Camera2dBundle</code> is now known as
-                                        <code>OrthographicCameraBundle</code>.</p>
+                                        <code>OrthographicCameraBundle</code>.
+                                    </p>
                                     <p><code>OrthographicCameraBundle</code> does not implement <code>Default</code>, so
                                         to change its transform at spawn while keeping everything else the same,
                                         consider something like the following:</p>
@@ -1028,12 +1032,14 @@ commands<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class=
                                     <p><code>RasterizationStateDescriptor</code> no longer exists. Much of its
                                         functionality has been moved to other fields on <code>PipelineDescriptor</code>.
                                         <code>cull_mode</code>, for example, is now found in the
-                                        <code>primitive: PrimitiveState</code> field.</p>
+                                        <code>primitive: PrimitiveState</code> field.
+                                    </p>
                                     <p>Buffers of type <code>Vec&lt;Color&gt;</code> can no longer be uploaded to the
                                         GPU directly due to limitations with <code>RenderResources</code> and the new
                                         <code>Byteable</code> requirement. Consider using a <code>Vec&lt;Vec4&gt;</code>
                                         instead, and inserting colors with <code>as_rgba_f32()</code> and
-                                        <code>.into()</code> instead:</p>
+                                        <code>.into()</code> instead:
+                                    </p>
                                     <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-meta z-annotation z-rust"><span class="z-punctuation z-definition z-annotation z-rust">#</span><span class="z-punctuation z-section z-group z-begin z-rust">[</span><span class="z-variable z-annotation z-rust">derive</span><span class="z-meta z-annotation z-parameters z-rust"><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span></span><span class="z-meta z-annotation z-parameters z-rust"><span class="z-meta z-group z-rust">RenderResources<span class="z-punctuation z-separator z-rust">,</span> Default<span class="z-punctuation z-separator z-rust">,</span> TypeUuid</span></span><span class="z-meta z-annotation z-parameters z-rust"><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-punctuation z-section z-group z-end z-rust">]</span></span>
 <span class="z-meta z-struct z-rust"><span class="z-storage z-type z-struct z-rust">struct</span> </span><span class="z-meta z-struct z-rust"><span class="z-entity z-name z-struct z-rust">SomeShader</span> </span><span class="z-meta z-struct z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
     <span class="z-meta z-annotation z-rust"><span class="z-punctuation z-definition z-annotation z-rust">#</span><span class="z-punctuation z-section z-group z-begin z-rust">[</span><span class="z-variable z-annotation z-rust">render_resources</span><span class="z-meta z-annotation z-parameters z-rust"><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span></span><span class="z-meta z-annotation z-parameters z-rust"><span class="z-meta z-group z-rust">buffer</span></span><span class="z-meta z-annotation z-parameters z-rust"><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-punctuation z-section z-group z-end z-rust">]</span></span>
@@ -1050,7 +1056,8 @@ commands<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class=
                                     </h3>
                                     <p>The <code>ViewProj</code> matrix is now set via the name
                                         <code>CameraViewProj</code> rather than <code>Camera</code>. If you don't update
-                                        this, bevy will fail silently and you won't be able to see anything!</p>
+                                        this, bevy will fail silently and you won't be able to see anything!
+                                    </p>
                                     <pre data-lang="glsl" class="language-glsl z-code"><code class="language-glsl" data-lang="glsl"><span class="z-source z-glsl"><span class="z-comment z-line z-double-slash z-glsl"><span class="z-punctuation z-definition z-comment z-glsl">//</span> 0.4
 </span><span class="z-storage z-modifier z-glsl">layout</span><span class="z-meta z-group z-glsl"><span class="z-punctuation z-section z-group z-begin z-glsl">(</span>set <span class="z-keyword z-operator z-assignment z-glsl">=</span> <span class="z-constant z-numeric z-glsl">0</span><span class="z-punctuation z-separator z-glsl">,</span> binding <span class="z-keyword z-operator z-assignment z-glsl">=</span> <span class="z-constant z-numeric z-glsl">0</span><span class="z-punctuation z-section z-group z-end z-glsl">)</span></span> <span class="z-storage z-modifier z-glsl">uniform</span> Camera <span class="z-meta z-block z-glsl"><span class="z-punctuation z-section z-block z-begin z-glsl">{</span>
     <span class="z-storage z-type z-glsl">mat4</span> ViewProj<span class="z-punctuation z-terminator z-glsl">;</span>

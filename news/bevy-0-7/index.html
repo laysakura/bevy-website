@@ -24,11 +24,11 @@
             <div class="header__content">
                 <label class="main-menu-backdrop" for="mobile-menu-state"></label>
                 <label class="header__hamburger button-square button-square--header" for="mobile-menu-state">
-                    <img src="/assets/icon-hamburger.svg">
+                    <img src="/bevy-website/assets/icon-hamburger.svg">
                 </label>
                 <div class="header__left-block">
                     <a class="header__logo" href="/bevy-website/">
-                        <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                        <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                     </a>
                     <div class="header__message">
 
@@ -43,10 +43,10 @@
                     data-page-menu-switch-state-container>
                     <div class="main-menu__header">
                         <a href="/bevy-website/">
-                            <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                            <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                         </a>
                         <label class="button-square button-square--header" for="mobile-menu-state">
-                            <img src="/assets/icon-times.svg">
+                            <img src="/bevy-website/assets/icon-times.svg">
                         </label>
                     </div>
 
@@ -790,9 +790,9 @@
                 </nav>
                 <div class="header__cta-container">
                     <a class="button button--pink header__cta" href="/bevy-website/community/donate">Donate <img
-                            class="button__icon" src="/assets/heart.svg" alt="heart icon" /></a>
+                            class="button__icon" src="/bevy-website/assets/heart.svg" alt="heart icon" /></a>
                     <a class="header__cta header__cta--github" href="https://github.com/bevyengine/bevy">
-                        <img src="/assets/github-mark-white.svg" alt="GitHub repo">
+                        <img src="/bevy-website/assets/github-mark-white.svg" alt="GitHub repo">
                     </a>
                 </div>
             </div>
@@ -1283,7 +1283,8 @@
                                             improvements</a>
 
                                         <label class="tree-menu__toggle" for="news-menu-1-documentation-improvements">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -1471,7 +1472,8 @@
                                             Log</a>
 
                                         <label class="tree-menu__toggle" for="news-menu-1-full-change-log">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -1556,18 +1558,18 @@
                             <span class="news-social-links">
                                 (
 
-                                <img src="/assets/github_grey.svg" class="news-social-icon" /><span
+                                <img src="/bevy-website/assets/github_grey.svg" class="news-social-icon" /><span
                                     class="media-content">
                                     <a class="news-social-link" href="https://www.github.com/cart">@cart</a></span>
 
 
-                                <img src="/assets/twitter_grey.svg" class="news-social-icon" />
+                                <img src="/bevy-website/assets/twitter_grey.svg" class="news-social-icon" />
                                 <span class="media-content">
                                     <a class="news-social-link" href="https://www.twitter.com/cart_cart">@cart_cart</a>
                                 </span>
 
 
-                                <img src="/assets/youtube_grey.svg" class="news-social-icon" />
+                                <img src="/bevy-website/assets/youtube_grey.svg" class="news-social-icon" />
                                 <span class="media-content">
                                     <a class="news-social-link" href="https://www.youtube.com/cartdev">cartdev</a>
                                 </span>
@@ -1594,7 +1596,8 @@
                             <p>Thanks to <strong>123</strong> contributors, <strong>349</strong> pull requests, and our
                                 <a href="https://github.com/sponsors/cart"><strong>generous sponsors</strong></a>, I'm
                                 happy to announce the <strong>Bevy 0.7</strong> release on <a
-                                    href="https://crates.io/crates/bevy">crates.io</a>!</p>
+                                    href="https://crates.io/crates/bevy">crates.io</a>!
+                            </p>
                             <p>For those who don't know, Bevy is a refreshingly simple data-driven game engine built in
                                 Rust. You can check out <a href="/bevy-website/learn/book/getting-started/">Quick Start
                                     Guide</a> to get started. Bevy is also free and open source forever! You can grab
@@ -1822,16 +1825,19 @@
                                 <code>.ktx2</code>, and <code>.basis</code> files. This includes support for the
                                 standard ASTC, BCn, and ETC2 formats, as well as 'universal' formats like ETC1S and
                                 UASTC that can be transcoded to the standard formats supported by specific systems at
-                                runtime. The glTF loader was also extended to support loading these formats.</p>
+                                runtime. The glTF loader was also extended to support loading these formats.
+                            </p>
                             <p>These features can be enabled using the <code>dds</code>, <code>ktx2</code>, and
-                                <code>basis-universal</code> cargo features.</p>
+                                <code>basis-universal</code> cargo features.
+                            </p>
                             <h2 id="render-to-texture">Render To Texture
                                 <a class="anchor-link" href="#render-to-texture">#</a>
                             </h2>
                             <div class="release-feature-authors">authors: @HackerFoo</div>
                             <p>Bevy now has initial support for rendering to texture by configuring the
                                 <code>render_target</code> field on <code>Camera</code>. This enables scenarios such as
-                                mirrors, split screen, 2d UI in 3d space, portals, etc.</p>
+                                mirrors, split screen, 2d UI in 3d space, portals, etc.
+                            </p>
                             <p><video controls loop>
                                     <source src="render_to_texture.mp4" type="video/mp4" />
                                 </video></p>
@@ -1852,7 +1858,8 @@
                                     href="https://bevyengine.org/news/bevy-0-6/#shader-preprocessor">shader defs</a>, <a
                                     href="https://bevyengine.org/news/bevy-0-6/#shader-imports">shader imports</a>, and
                                 <a href="https://bevyengine.org/news/bevy-0-6/#pipeline-specialization">pipeline
-                                    specialization</a> based on user-configurable keys:</p>
+                                    specialization</a> based on user-configurable keys:
+                            </p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-keyword z-operator z-rust">#</span>import <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>shaders/game_of_life_texture_bind_group.wgsl<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span>
 
 <span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">[</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">[</span><span class="z-support z-function z-rust">stage</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>compute</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-support z-function z-rust">workgroup_size</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-constant z-numeric z-integer z-decimal z-rust">8</span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-constant z-numeric z-integer z-decimal z-rust">8</span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-constant z-numeric z-integer z-decimal z-rust">1</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-section z-group z-end z-rust">]</span></span><span class="z-punctuation z-section z-group z-end z-rust">]</span></span>
@@ -1882,7 +1889,8 @@
                                 and custom shader materials now support arbitrary Meshes automatically, provided those
                                 Meshes have the vertex attributes required by the material shaders. It also means that
                                 if your Mesh is missing any attribute required by its material, rendering can fail
-                                gracefully.</p>
+                                gracefully.
+                            </p>
                             <p>We also made use of this system to implement joint weights and indices for our new <a
                                     href="/bevy-website/news/bevy-0-7/#skeletal-animation">Skeletal Animation</a>
                                 implementation.</p>
@@ -1992,7 +2000,8 @@ app
                             <p>This is equivalent in functionality to <code>..Default::default()</code>, it's just more
                                 compressed. And you can still use the longer form if you prefer. The
                                 <code>default()</code> function is included in Bevy's prelude, so you don't need to
-                                manually import it. Ergonomics for the win!</p>
+                                manually import it. Ergonomics for the win!
+                            </p>
                             <h2 id="query-many">Query::many
                                 <a class="anchor-link" href="#query-many">#</a>
                             </h2>
@@ -2063,7 +2072,8 @@ app
 </span></code></pre>
                             <p><strong>Bevy 0.7</strong> removes <code>QuerySet</code> in favor of
                                 <code>ParamSet</code>, which generalizes the QuerySet pattern for <em>any</em> system
-                                parameter:</p>
+                                parameter:
+                            </p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-meta z-function z-rust"><span class="z-meta z-function z-rust"><span class="z-storage z-type z-function z-rust">fn</span> </span><span class="z-entity z-name z-function z-rust">system</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-begin z-rust">(</span><span class="z-storage z-modifier z-rust">mut</span> <span class="z-variable z-parameter z-rust">set</span><span class="z-punctuation z-separator z-rust">:</span> <span class="z-meta z-generic z-rust">ParamSet<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-meta z-generic z-rust">Query<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-keyword z-operator z-rust">&amp;</span><span class="z-storage z-modifier z-rust">mut</span> A, <span class="z-keyword z-operator z-rust">&amp;</span>B<span class="z-punctuation z-section z-group z-end z-rust">)</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span>, <span class="z-meta z-generic z-rust">Query<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-keyword z-operator z-rust">&amp;</span><span class="z-storage z-modifier z-rust">mut</span> A, <span class="z-keyword z-operator z-rust">&amp;</span>C<span class="z-punctuation z-section z-group z-end z-rust">)</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span><span class="z-punctuation z-section z-group z-end z-rust">)</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-end z-rust">)</span></span></span></span><span class="z-meta z-function z-rust"> </span><span class="z-meta z-function z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
     <span class="z-keyword z-control z-rust">for</span> <span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>a<span class="z-punctuation z-separator z-rust">,</span> b</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-keyword z-operator z-rust">in</span> set<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">p0</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">iter_mut</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
     </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
@@ -2232,14 +2242,16 @@ app
                             <ul>
                                 <li>Removed unsound lifetime annotations on <code>EntityMut</code> and
                                     <code>Query</code>, which could be used to get aliased mutability in some
-                                    situations.</li>
+                                    situations.
+                                </li>
                                 <li>Labeled <code>World::entities_mut</code> unsafe (because manually modifying entity
                                     metadata can invalidate safety assumptions)</li>
                                 <li>Removed unsound <code>World::components_mut</code> (which allowed replacing
                                     component metadata, invalidating assumptions made elsewhere in World)</li>
                                 <li>Fixed a <code>World::resource_scope</code> soundness bug</li>
                                 <li>Used <code>ManuallyDrop</code> in resource id initialization instead of
-                                    <code>forget()</code> to avoid invalidating a data pointer before it is used.</li>
+                                    <code>forget()</code> to avoid invalidating a data pointer before it is used.
+                                </li>
                             </ul>
                             <p>We now also run the <a href="https://github.com/rust-lang/miri">miri</a> interpreter on
                                 Bevy ECS in our CI to help detect and prevent future soundness / correctness issues.</p>
@@ -2433,7 +2445,8 @@ app
                             <p>Sponsorships help make my full time work on Bevy sustainable. If you believe in Bevy's
                                 mission, consider sponsoring me (@cart) ... every bit helps!</p>
                             <p><a class="button button--pink header__cta" href="https://github.com/sponsors/cart">Donate
-                                    <img class="button__icon" src="/assets/heart.svg" alt="heart icon" /></a></p>
+                                    <img class="button__icon" src="/bevy-website/assets/heart.svg"
+                                        alt="heart icon" /></a></p>
                             <h2 id="contributors">Contributors
                                 <a class="anchor-link" href="#contributors">#</a>
                             </h2>

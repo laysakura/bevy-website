@@ -24,11 +24,11 @@
             <div class="header__content">
                 <label class="main-menu-backdrop" for="mobile-menu-state"></label>
                 <label class="header__hamburger button-square button-square--header" for="mobile-menu-state">
-                    <img src="/assets/icon-hamburger.svg">
+                    <img src="/bevy-website/assets/icon-hamburger.svg">
                 </label>
                 <div class="header__left-block">
                     <a class="header__logo" href="/bevy-website/">
-                        <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                        <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                     </a>
                     <div class="header__message">
 
@@ -43,10 +43,10 @@
                     data-page-menu-switch-state-container>
                     <div class="main-menu__header">
                         <a href="/bevy-website/">
-                            <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                            <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                         </a>
                         <label class="button-square button-square--header" for="mobile-menu-state">
-                            <img src="/assets/icon-times.svg">
+                            <img src="/bevy-website/assets/icon-times.svg">
                         </label>
                     </div>
 
@@ -1393,9 +1393,9 @@
                 </nav>
                 <div class="header__cta-container">
                     <a class="button button--pink header__cta" href="/bevy-website/community/donate">Donate <img
-                            class="button__icon" src="/assets/heart.svg" alt="heart icon" /></a>
+                            class="button__icon" src="/bevy-website/assets/heart.svg" alt="heart icon" /></a>
                     <a class="header__cta header__cta--github" href="https://github.com/bevyengine/bevy">
-                        <img src="/assets/github-mark-white.svg" alt="GitHub repo">
+                        <img src="/bevy-website/assets/github-mark-white.svg" alt="GitHub repo">
                     </a>
                 </div>
             </div>
@@ -1431,7 +1431,8 @@
                                             v3</a>
 
                                         <label class="tree-menu__toggle" for="news-menu-1-ecs-schedule-v3">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -1843,7 +1844,8 @@
                                             Tonemapping Choices</a>
 
                                         <label class="tree-menu__toggle" for="news-menu-1-more-tonemapping-choices">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -2032,7 +2034,8 @@
                                             Grading Control</a>
 
                                         <label class="tree-menu__toggle" for="news-menu-1-color-grading-control">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -2262,7 +2265,8 @@
                                             href="https://bevyengine.org/news/bevy-0-10/#cubic-curves">Cubic Curves</a>
 
                                         <label class="tree-menu__toggle" for="news-menu-1-cubic-curves">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -3068,7 +3072,8 @@
                                             Changelog</a>
 
                                         <label class="tree-menu__toggle" for="news-menu-1-full-changelog">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -3194,7 +3199,8 @@
                                     Start Guide</a> to try it today. It's free and open source forever! You can grab the
                                 full <a href="https://github.com/bevyengine/bevy">source code</a> on GitHub. Check out
                                 <a href="https://bevyengine.org/assets">Bevy Assets</a> for a collection of
-                                community-developed plugins, games, and learning resources.</p>
+                                community-developed plugins, games, and learning resources.
+                            </p>
                             <p>To update an existing Bevy App or Plugin to <strong>Bevy 0.10</strong>, check out our <a
                                     href="/bevy-website/learn/migration-guides/0.9-0.10/">0.9 to 0.10 Migration
                                     Guide</a>.</p>
@@ -3257,7 +3263,8 @@
                                     PR</a> by <code>@alice-i-cecile</code> are great places to start if you would like a
                                 view into our process and rationale. As we all know, plans and implementations are two
                                 different things. Our final implementation is a bit different from the initial RFC (in a
-                                good way).</p>
+                                good way).
+                            </p>
                             <p>There are a ton of changes, but we've put a lot of care into ensuring the <a
                                     href="/bevy-website/learn/migration-guides/0.9-0.10/#migrate-engine-to-schedule-v3-stageless">migration
                                     path</a> for existing applications is relatively straightforward. Don't sweat it!
@@ -3268,7 +3275,8 @@
                             </h3>
                             <p>Have you ever wanted to specify that <code>system_a</code> runs before
                                 <code>system_b</code>, only to be met with confusing warnings that <code>system_b</code>
-                                isn't found because it's in a different stage?</p>
+                                isn't found because it's in a different stage?
+                            </p>
                             <p>No more! All systems within a single <a
                                     href="https://docs.rs/bevy/0.10.0/bevy/ecs/schedule/struct.Schedule.html"><code>Schedule</code></a>
                                 are now stored in a single data structure with a global awareness of what's going on.
@@ -3294,7 +3302,8 @@
                                     Rust functions!</a>) are how you define game logic in Bevy ECS. With
                                 <strong>Schedule v3</strong>, you can add systems to your <a
                                     href="https://docs.rs/bevy/0.10.0/bevy/app/struct.App.html"><code>App</code></a>
-                                just like you did in previous versions:</p>
+                                just like you did in previous versions:
+                            </p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust">app<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">add_system</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>gravity</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
 </span></code></pre>
                             <p>However <strong>Schedule v3</strong> has some new tricks up its sleeve! You can now add
@@ -3416,7 +3425,8 @@
                                 <a
                                     href="https://docs.rs/bevy/0.10.0/bevy/ecs/system/struct.Commands.html"><code>Commands</code></a>
                                 added in systems to do things like spawn and despawn entities) are now simply performed
-                                in the <code>apply_system_buffers</code> exclusive system.</p>
+                                in the <code>apply_system_buffers</code> exclusive system.
+                            </p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust">app<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">add_systems</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>
     <span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>
         <span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> This system produces some commands
@@ -3485,11 +3495,13 @@ schedule<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class=
                                 <li><strong>Fixed timestep systems:</strong> another schedule?! The exclusive system
                                     that runs this schedule accumulates time, running a while loop that repeatedly runs
                                     <code>CoreSchedule::FixedUpdate</code> until all of the accumulated time has been
-                                    spent.</li>
+                                    spent.
+                                </li>
                                 <li><strong>Entering and exiting states:</strong> a bonanza of schedules. Each
                                     collection of systems that runs logic to enter and exit a state variant is stored in
                                     its own schedule, which is called based on the change in state in the
-                                    <code>apply_state_transitions::&lt;S&gt;</code> exclusive system.</li>
+                                    <code>apply_state_transitions::&lt;S&gt;</code> exclusive system.
+                                </li>
                                 <li><strong>Rendering:</strong> all rendering logic is stored in its own schedule to
                                     allow it to run asynchronously relative to gameplay logic.</li>
                                 <li><strong>Controlling the outermost loop:</strong> in order to handle the
@@ -3509,7 +3521,8 @@ schedule<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class=
                                 systems that return a <code>bool</code>. If the <code>bool</code>s returned by
                                 <em>all</em> of a system's <strong>run conditions</strong> are <code>true</code>, the
                                 system will run. Otherwise the system will be skipped for the current run of the
-                                schedule:</p>
+                                schedule:
+                            </p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> Let&#39;s make our own run condition
 </span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-rust"><span class="z-storage z-type z-function z-rust">fn</span> </span><span class="z-entity z-name z-function z-rust">game_win_condition</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-begin z-rust">(</span><span class="z-variable z-parameter z-rust">query</span><span class="z-punctuation z-separator z-rust">:</span> <span class="z-meta z-generic z-rust">Query<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-keyword z-operator z-rust">&amp;</span>Player<span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span>, <span class="z-variable z-parameter z-rust">score</span><span class="z-punctuation z-separator z-rust">:</span> <span class="z-meta z-generic z-rust">Res<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span>Score<span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-end z-rust">)</span></span></span></span><span class="z-meta z-function z-rust"> <span class="z-meta z-function z-return-type z-rust"><span class="z-punctuation z-separator z-rust">-&gt;</span> <span class="z-storage z-type z-rust">bool</span></span> </span><span class="z-meta z-function z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
     <span class="z-storage z-type z-rust">let</span> player <span class="z-keyword z-operator z-assignment z-rust">=</span> query<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">single</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-terminator z-rust">;</span>
@@ -3551,7 +3564,8 @@ app<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-su
                                 complex control flow: use the &quot;schedules in exclusive systems&quot; pattern in the
                                 <a href="https://bevyengine.org/news/bevy-0-10/#directly-schedule-exclusive-systems">section
                                     above</a>. For the other 99% of use cases, enjoy the simpler <code>bool</code>-based
-                                run conditions!</p>
+                                run conditions!
+                            </p>
                             <h3 id="simpler-states">Simpler States
                                 <a class="anchor-link" href="#simpler-states">#</a>
                             </h3>
@@ -3676,7 +3690,8 @@ app<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-su
                                 and <a
                                     href="https://docs.rs/bevy/0.9.1/bevy/render/enum.RenderStage.html"><code>RenderStage</code></a>
                                 is not a coincidence. Much like stages, there are command flush points between each set,
-                                and existing systems have been migrated directly.</p>
+                                and existing systems have been migrated directly.
+                            </p>
                             <p>Some parts of the stage-centric architecture were appealing: a clear high-level
                                 structure, coordination on flush points (to reduce excessive bottlenecks), and good
                                 default behavior.
@@ -3685,7 +3700,8 @@ app<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-su
                                     href="https://github.com/bevyengine/bevy/pull/7466">added by @cart</a>).
                                 <strong>Base Sets</strong> are just normal <a
                                     href="https://docs.rs/bevy/0.10.0/bevy/ecs/schedule/trait.SystemSet.html"><code>SystemSets</code></a>,
-                                except:</p>
+                                except:
+                            </p>
                             <ol>
                                 <li>Every system can belong to at most one base set.</li>
                                 <li>Systems that do not specify a base set will be added to the default base set for the
@@ -3764,7 +3780,8 @@ app
                                 of Bevy used a simple but limited shadow map implementation for directional light
                                 sources. For a given light, you would define the resolution of the shadow map
                                 <em>and</em> a manual &quot;view projection&quot; that would determine how the shadow is
-                                cast. This had a number of downsides:</p>
+                                cast. This had a number of downsides:
+                            </p>
                             <ul>
                                 <li>The resolution of the shadow map was fixed. You had to choose something between
                                     &quot;cover a large area, but have a lower resolution&quot; and &quot;cover a
@@ -3843,7 +3860,8 @@ app
                                 see if it helps or not.</p>
                             <p>The prepass is still very useful when working on special effects that require a depth or
                                 normal texture, so if you want to use it you can simply add the
-                                <code>DepthPrepass</code> or <code>NormalPrepass</code> components to your camera.</p>
+                                <code>DepthPrepass</code> or <code>NormalPrepass</code> components to your camera.
+                            </p>
                             <h2 id="shadow-mapping-using-prepass-shaders">Shadow Mapping using Prepass Shaders
                                 <a class="anchor-link" href="#shadow-mapping-using-prepass-shaders">#</a>
                             </h2>
@@ -3971,7 +3989,8 @@ app
                                     <code>BloomCompositeMode::Additive</code>.
                                 </li>
                                 <li>Explore the new bloom settings in an interactive playground using the new
-                                    <code>bloom_3d</code> (and <code>bloom_2d</code>) examples.</li>
+                                    <code>bloom_3d</code> (and <code>bloom_2d</code>) examples.
+                                </li>
                             </ol>
                             <div
                                 style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); grid-gap: 16px;">
@@ -4018,7 +4037,8 @@ app
                             <div class="release-feature-authors">author: Marco Buono (@coreh)</div>
                             <p>Bevy can now render distance and atmospheric fog effects, bringing a heightened sense of
                                 <em>depth</em> and <em>ambiance</em> to your scenes by making objects appear dimmer the
-                                further away they are from view.</p>
+                                further away they are from view.
+                            </p>
                             <p><img src="https://bevyengine.org/news/bevy-0-10/fog.png"
                                     alt="The new fog example showcases different fog modes and parameters." /></p>
                             <p>Fog is controllable per camera via the new <a
@@ -4040,7 +4060,8 @@ app
                                 DirectX 7 days are supported:</p>
                             <p><code>FogFalloff::Linear</code> increases in intensity linearly from 0 to 1 between
                                 <code>start</code> and <code>end</code> parameters. (This example uses values of 0.8 and
-                                2.2, respectively.)</p>
+                                2.2, respectively.)
+                            </p>
                             <svg width="370" height="212" viewBox="0 0 370 212" fill="none">
                                 <path d="M331 151H42V49" stroke="currentColor" stroke-width="2" />
                                 <text font-family="sans-serif" fill="currentColor" style="white-space: pre"
@@ -4201,7 +4222,8 @@ app
                             </svg>
                             <p>Additionally, a more sophisticated <code>FogFalloff::Atmospheric</code> mode is available
                                 which provides <em>more physically accurate</em> results by taking light
-                                <code>extinction</code> and <code>inscattering</code> into account separately.</p>
+                                <code>extinction</code> and <code>inscattering</code> into account separately.
+                            </p>
                             <p><a
                                     href="https://docs.rs/bevy/0.10.0/bevy/pbr/struct.DirectionalLight.html"><code>DirectionalLight</code></a>
                                 influence is also supported for all fog modes via the
@@ -4255,7 +4277,8 @@ app
                                     — Combines the colors of the fragments with the colors behind them in an additive
                                     process, (i.e. like light) producing <strong>brighter</strong> results. Useful for
                                     effects like fire, holograms, ghosts, lasers and other energy beams. Also known as
-                                    <em>Linear Dodge</em> in graphics software.</li>
+                                    <em>Linear Dodge</em> in graphics software.
+                                </li>
                                 <li><a
                                         href="https://docs.rs/bevy/0.10.0/bevy/pbr/enum.AlphaMode.html#variant.Multiply"><code>AlphaMode::Multiply</code></a>
                                     — Combines the colors of the fragments with the colors behind them in a
@@ -4278,7 +4301,8 @@ app
                                     alt="The new blend_modes example." /></p>
                             <p><strong>Note:</strong> Meshes using the new blend modes are drawn on the existing
                                 <code>Transparent3d</code> render phase, and therefore the same <em>z-sorting
-                                    considerations/limitations</em> from <code>AlphaMode::Blend</code> apply.</p>
+                                    considerations/limitations</em> from <code>AlphaMode::Blend</code> apply.
+                            </p>
                             <h2 id="more-tonemapping-choices">More Tonemapping Choices
                                 <a class="anchor-link" href="#more-tonemapping-choices">#</a>
                             </h2>
@@ -4298,7 +4322,8 @@ app
                             </h3>
                             <p>A simple method that adapts to the color in a scene:
                                 <code>r = color / (1.0 + color)</code>. Lots of hue shifting, brights don't desaturate
-                                naturally. Bright primaries and secondaries don't desaturate at all.</p>
+                                naturally. Bright primaries and secondaries don't desaturate at all.
+                            </p>
                             <p><img src="https://bevyengine.org/news/bevy-0-10/tm_reinhard.png" alt="reinhard" /></p>
                             <h3 id="reinhard-luminance">Reinhard Luminance
                                 <a class="anchor-link" href="#reinhard-luminance">#</a>
@@ -4432,7 +4457,8 @@ app
                                 was represented as an ECS resource (contained in the <code>Windows</code> resource). In
                                 <strong>Bevy 0.10</strong> <a
                                     href="https://docs.rs/bevy/0.10.0/bevy/window/struct.Window.html"><code>Window</code></a>
-                                is now a component (and therefore windows are represented as entities).</p>
+                                is now a component (and therefore windows are represented as entities).
+                            </p>
                             <p>This accomplishes a number of goals:</p>
                             <ul>
                                 <li>It opens the doors to representing Windows in Bevy's scene system</li>
@@ -4475,7 +4501,8 @@ app
                                 loops here are extremely hot and any extra overhead is noticeable. In <strong>Bevy
                                     0.10</strong>, we've thrown the kitchen sink at this problem and have attacked it
                                 from every angle. Overall, these following optimizations should make the render stage
-                                <strong>2-3 times faster</strong> than it was in 0.9:</p>
+                                <strong>2-3 times faster</strong> than it was in 0.9:
+                            </p>
                             <ul>
                                 <li>In <a href="https://github.com/bevyengine/bevy/pull/7639">#7639</a> by @danchia, we
                                     found that even disabled logging has a strong impact on hot loops, netting us 20-50%
@@ -4486,7 +4513,8 @@ app
                                 <li>In <a href="https://github.com/bevyengine/bevy/pull/6885">#6885</a> by @james7132,
                                     we rearchitected our <code>PhaseItem</code> and <code>RenderCommand</code>
                                     infrastructure to combine common operations when fetching component data from the
-                                    <code>World</code>, netting us a 7% speedup.</li>
+                                    <code>World</code>, netting us a 7% speedup.
+                                </li>
                                 <li>In <a href="https://github.com/bevyengine/bevy/pull/7053">#7053</a> by @james7132,
                                     we changed <code>TrackedRenderPass</code>'s allocation patterns to minimize
                                     branching within these loops, netting a 6% speedup.</li>
@@ -4557,7 +4585,8 @@ app
                                 benefits entirely depend on how the hierarchy is structured and how many CPU cores are
                                 available. In our testing, this has made transform propagation in our
                                 <code>many_foxes</code> benchmark <strong>4 times faster</strong> on our testing
-                                hardware.</p>
+                                hardware.
+                            </p>
                             <p>If transform propagation can be parallelized, so can forward kinematics for animation. We
                                 leveraged the same guaranteed structure of well formed hierarchies to fully parallelize
                                 playing skeletal animations. We also enabled a basic entity-path cache lookup to reduce
@@ -4566,7 +4595,8 @@ app
                                     faster</strong>.</p>
                             <p>Combined with all of the other optimizations seen in this release, our tests on the
                                 <code>many_foxes</code> benchmark has sped up from ~10ms per frame (~100 FPS) to ~2.3ms
-                                per frame (~434 FPS), a near 5x speedup!</p>
+                                per frame (~434 FPS), a near 5x speedup!
+                            </p>
                             <h2 id="ecs-optimizations">ECS Optimizations
                                 <a class="anchor-link" href="#ecs-optimizations">#</a>
                             </h2>
@@ -4588,16 +4618,19 @@ app
                                 entity location metadata and avoiding extra memory lookups, we've significantly reduced
                                 the overhead when making random query lookups via <code>Query::get</code>, seeing up to
                                 a 43% reduction in the overhead spent in <code>Query::get</code> and
-                                <code>World::get</code>.</p>
+                                <code>World::get</code>.
+                            </p>
                             <p>In <a href="https://github.com/bevyengine/bevy/pull/6800">#6800</a> and <a
                                     href="https://github.com/bevyengine/bevy/pull/6902">#6902</a>, we've found that
                                 rustc can optimize out compile-time constant branches across function boundaries, moving
                                 the branch from runtime to compile time, has resulted in up to a 50% reduction in
                                 overhead when using <code>EntityRef::get</code>, <code>EntityMut::insert</code>,
-                                <code>EntityMut::remove</code>, and their variants.</p>
+                                <code>EntityMut::remove</code>, and their variants.
+                            </p>
                             <p>In <a href="https://github.com/bevyengine/bevy/pull/6391">#6391</a>, we've reworked
                                 <code>CommandQueue</code>'s internals to be more CPU-cache friendly, which has shown up
-                                to a 37% speedup when encoding and applying commands.</p>
+                                to a 37% speedup when encoding and applying commands.
+                            </p>
                             <h2 id="systemparam-improvements"><code>SystemParam</code> Improvements
                                 <a class="anchor-link" href="#systemparam-improvements">#</a>
                             </h2>
@@ -4645,7 +4678,8 @@ app
                                 <code>Deferred</code> system parameter, which accepts a <a
                                     href="https://docs.rs/bevy/0.10.0/bevy/ecs/system/trait.SystemBuffer.html"><code>SystemBuffer</code></a>
                                 trait impl. This lets you create systems with custom deferred mutation behavior while
-                                skipping the overhead associated with <code>Commands</code>!</p>
+                                skipping the overhead associated with <code>Commands</code>!
+                            </p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-documentation z-rust"><span class="z-punctuation z-definition z-comment z-rust">///</span> Sends events with a delay, but can run in parallel with other event writers.
 </span><span class="z-meta z-struct z-rust"><span class="z-storage z-modifier z-rust">pub</span> <span class="z-storage z-type z-struct z-rust">struct</span> </span><span class="z-meta z-struct z-rust"><span class="z-meta z-generic z-rust"><span class="z-entity z-name z-struct z-rust">EventBuffer</span><span class="z-meta z-generic z-rust"><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span>E<span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span></span></span><span class="z-meta z-struct z-rust"></span><span class="z-meta z-struct z-rust"><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-meta z-generic z-rust"><span class="z-support z-type z-rust">Vec</span><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span>E<span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span></span><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-terminator z-rust">;</span>
 
@@ -4768,7 +4802,8 @@ app
                                     href="https://crates.io/crates/rodio"><code>rodio</code></a>, contains support for
                                 spatial audio. Bevy 0.10 exposes basic spatial audio. There are still a few caveats,
                                 like no HRTF and no first class support for <code>Emitter</code> and
-                                <code>Listener</code> components.</p>
+                                <code>Listener</code> components.
+                            </p>
                             <p>Interestingly, during the development of this specific feature, <code>@harudagondi</code>
                                 found a <a href="https://github.com/RustAudio/rodio/issues/444">bug</a> where the audio
                                 channels reverse when running the app in either debug or release mode. This turns out to
@@ -4853,7 +4888,8 @@ app<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-me
                                 <code>#import bevy_render::globals</code> and <code>#import bevy_render::view</code>.
                                 Bevy's internal shaders now use these imports (saving a lot of redundancy). Previously
                                 you either needed to re-define in each shader or import the larger
-                                <code>bevy_pbr::mesh_view_types</code> (which wasn't always what was needed).</p>
+                                <code>bevy_pbr::mesh_view_types</code> (which wasn't always what was needed).
+                            </p>
                             <p>Previously this was needed:</p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-meta z-struct z-rust"><span class="z-storage z-type z-struct z-rust">struct</span> </span><span class="z-meta z-struct z-rust"><span class="z-entity z-name z-struct z-rust">View</span> </span><span class="z-meta z-struct z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
     <span class="z-variable z-other z-member z-rust">view_proj</span><span class="z-punctuation z-separator z-type z-rust">:</span> <span class="z-meta z-generic z-rust">mat4x4<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-storage z-type z-rust">f32</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span>,
@@ -4941,7 +4977,8 @@ query<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-
                                 also currently is used to implement <code>WorldCell</code>. We're planning to use
                                 <code>UnsafeEntityCell</code> to implement versions of
                                 <code>EntityRef</code>/<code>EntityMut</code> that only have access to the components on
-                                the entity rather than the entire world.</p>
+                                the entity rather than the entire world.
+                            </p>
                             <p>These abstractions were introduced in <a
                                     href="https://github.com/bevyengine/bevy/pull/6404">#6404</a>, <a
                                     href="https://github.com/bevyengine/bevy/pull/7381">#7381</a> and <a
@@ -4981,7 +5018,8 @@ query<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-
                                 which gives Bevy app developers the ability to manually configure exactly how (and if) a
                                 <a
                                     href="https://docs.rs/bevy/0.10.0/bevy/render/camera/struct.Camera.html"><code>Camera</code></a>'s
-                                render results should be written to the final output texture:</p>
+                                render results should be written to the final output texture:
+                            </p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> Configure the camera to write to the final output texture
 </span>camera<span class="z-punctuation z-accessor z-dot z-rust">.</span>output_mode <span class="z-keyword z-operator z-assignment z-rust">=</span> <span class="z-meta z-path z-rust">CameraOutputMode<span class="z-punctuation z-accessor z-rust">::</span></span>Write <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
     <span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> Do not blend with the current state of the output texture
@@ -5006,7 +5044,8 @@ query<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-
                                 previous camera has already rendered to the target on a given frame). This ensures that
                                 the state is consistent regardless of MSAA configuration. This defaults to true, so you
                                 only need to think about this if you have a multi-camera setup and you <em>don't</em>
-                                want MSAA writeback.</p>
+                                want MSAA writeback.
+                            </p>
                             <h2 id="configurable-visibility-component">Configurable Visibility Component
                                 <a class="anchor-link" href="#configurable-visibility-component">#</a>
                             </h2>
@@ -5133,7 +5172,8 @@ query<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-
                                     href="https://docs.rs/bevy/0.10.0/bevy/input/gamepad/struct.GamepadAxisChangedEvent.html"><code>GamepadAxisChangedEvent</code></a>,
                                 and <a
                                     href="https://docs.rs/bevy/0.10.0/bevy/input/gamepad/struct.GamepadButtonChangedEvent.html"><code>GamepadButtonChangedEvent</code></a>,
-                                and the internals have been reworked to accommodate this.</p>
+                                and the internals have been reworked to accommodate this.
+                            </p>
                             <p>This allows for simpler, more granular event access without filtering down the general <a
                                     href="https://docs.rs/bevy/0.10.0/bevy/input/gamepad/enum.GamepadEvent.html"><code>GamepadEvent</code></a>
                                 type. Nice!</p>
@@ -5150,7 +5190,8 @@ query<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-
                                     href="https://docs.rs/bevy/0.10.0/bevy/window/struct.Window.html"><code>Window</code></a>
                                 can now configure IME support using <code>ime_enabled</code> and
                                 <code>ime_position</code>, which enables the use of &quot;dead keys&quot;, which add
-                                support for French, Pinyin, etc:</p>
+                                support for French, Pinyin, etc:
+                            </p>
                             <p><video controls loop>
                                     <source src="ime.mp4" type="video/mp4" />
                                 </video></p>
@@ -5204,7 +5245,8 @@ query<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-
                                 call <code>Reflect::clone_value</code>, use the reflection deserializers, or create the
                                 dynamic value ourselves. Unfortunately, we can't just call
                                 <code>MyType::from_reflect</code> as we do not have knowledge of the concrete
-                                <code>MyType</code> at runtime.</p>
+                                <code>MyType</code> at runtime.
+                            </p>
                             <p><a
                                     href="https://docs.rs/bevy/0.10.0/bevy/reflect/struct.ReflectFromReflect.html"><code>ReflectFromReflect</code></a>
                                 is a new &quot;type data&quot; struct in the <a
@@ -5257,7 +5299,8 @@ registry<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class=
                                 <li>Reflected generic types now automatically implement <a
                                         href="https://docs.rs/bevy/0.10.0/bevy/reflect/trait.Reflect.html"><code>Reflect</code></a>
                                     if the generics also implement Reflect. No need to add manual
-                                    <code>T: Reflect</code> bounds!</li>
+                                    <code>T: Reflect</code> bounds!
+                                </li>
                                 <li>Component Reflection now uses <a
                                         href="https://docs.rs/bevy/0.10.0/bevy/ecs/world/struct.EntityRef.html"><code>EntityRef</code></a>
                                     / <a
@@ -5291,7 +5334,8 @@ registry<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class=
                                 UI component, which when added to a UI entity tracks the cursor position relative to the
                                 node. <code>Some((0, 0))</code> represents the top-left corner of the node,
                                 <code>Some((1,1))</code> represents the bottom-right corner of the node, and
-                                <code>None</code> represents the cursor being &quot;outside of the node&quot;.</p>
+                                <code>None</code> represents the cursor being &quot;outside of the node&quot;.
+                            </p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust">commands<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">spawn</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>
     <span class="z-meta z-path z-rust">NodeBundle<span class="z-punctuation z-accessor z-rust">::</span></span>default<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-separator z-rust">,</span>
     <span class="z-meta z-path z-rust">RelativeCursorPosition<span class="z-punctuation z-accessor z-rust">::</span></span>default<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-separator z-rust">,</span>
@@ -5311,7 +5355,8 @@ registry<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class=
                                     href="https://blog.rust-lang.org/inside-rust/2022/07/27/keyword-generics.html">yet!</a>).
                                 To enable UI layout config to be defined as constants, we've added <code>DEFAULT</code>
                                 associated constants to most of the Bevy UI types. For example, you can use
-                                <code>Style::DEFAULT</code> to define a const style:</p>
+                                <code>Style::DEFAULT</code> to define a const style:
+                            </p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-storage z-type z-rust">const</span> <span class="z-constant z-other z-rust">COOL_STYLE</span><span class="z-punctuation z-separator z-rust">:</span> Style <span class="z-keyword z-operator z-assignment z-rust">=</span> Style <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
     size<span class="z-punctuation z-separator z-rust">:</span> <span class="z-meta z-path z-rust">Size<span class="z-punctuation z-accessor z-rust">::</span></span>width<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-meta z-path z-rust">Val<span class="z-punctuation z-accessor z-rust">::</span></span>Px<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-constant z-numeric z-float z-rust">200.</span><span class="z-constant z-numeric z-float z-rust">0</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-separator z-rust">,</span>
     border<span class="z-punctuation z-separator z-rust">:</span> <span class="z-meta z-path z-rust">UiRect<span class="z-punctuation z-accessor z-rust">::</span></span>all<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-meta z-path z-rust">Val<span class="z-punctuation z-accessor z-rust">::</span></span>Px<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-constant z-numeric z-float z-rust">2.</span><span class="z-constant z-numeric z-float z-rust">0</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-separator z-rust">,</span>
@@ -5331,7 +5376,8 @@ registry<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class=
                                 a <code>Query</code> will still be faster if you know the exact components you're
                                 looking for). This gives users free rein to arbitrarily read any entity data from the
                                 World, and may see use in scripting language integrations and reflection-heavy
-                                workflows.</p>
+                                workflows.
+                            </p>
                             <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> Bevy 0.9
 </span><span class="z-keyword z-control z-rust">for</span> entity <span class="z-keyword z-operator z-rust">in</span> world<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">iter_entities</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
    <span class="z-keyword z-control z-rust">if</span> <span class="z-storage z-type z-rust">let</span> <span class="z-support z-type z-rust">Some</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>entity_ref</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-keyword z-operator z-assignment z-rust">=</span> world<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">get_entity</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>entity</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
@@ -5352,7 +5398,8 @@ registry<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class=
                                 functionality, but gives arbitrary mutable access to all entities in the
                                 <code>World</code>. We avoided implementing this for now due to the potential safety
                                 concerns of returning an iterator of <code>EntityMut</code>. For more details, see this
-                                <a href="https://github.com/bevyengine/bevy/issues/5504">GitHub issue</a>.</p>
+                                <a href="https://github.com/bevyengine/bevy/issues/5504">GitHub issue</a>.
+                            </p>
                             <h2 id="lch-color-space">LCH Color Space
                                 <a class="anchor-link" href="#lch-color-space">#</a>
                             </h2>
@@ -5467,7 +5514,8 @@ commands<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class=
                                 <em>despite</em> our Project Lead <code>@cart</code> being away for about a month for
                                 Christmas and snowboarding vacations. We maintained a high quality bar and built amazing
                                 things. Suffice it to say the future is looking bright (and sustainable)! Stay tuned for
-                                more SME appointments in more areas.</p>
+                                more SME appointments in more areas.
+                            </p>
                             <h2 id="what-s-next"><a name="what-s-next"></a>What's Next?
                                 <a class="anchor-link" href="#what-s-next">#</a>
                             </h2>
@@ -5480,7 +5528,8 @@ commands<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class=
                                     our focus to building out the Bevy Editor! We've started <a
                                         href="https://github.com/bevyengine/bevy/discussions/7100">gathering
                                         requirements</a> and would like to start the initial design phase in the
-                                    <strong>Bevy 0.11</strong> cycle.</li>
+                                    <strong>Bevy 0.11</strong> cycle.
+                                </li>
                                 <li><strong>Temporal Anti-Aliasing (TAA)</strong>: We've largely implemented TAA, which
                                     uses motion vectors and time to produce a very popular screen space anti-aliasing
                                     effect.</li>
@@ -5532,7 +5581,8 @@ commands<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class=
                                 consider <a href="/bevy-website/community/donate">sponsoring us</a> ... every bit helps!
                             </p>
                             <p><a class="button button--pink header__cta" href="/bevy-website/community/donate">Donate
-                                    <img class="button__icon" src="/assets/heart.svg" alt="heart icon"></a></p>
+                                    <img class="button__icon" src="/bevy-website/assets/heart.svg" alt="heart icon"></a>
+                            </p>
                             <h2 id="contributors">Contributors
                                 <a class="anchor-link" href="#contributors">#</a>
                             </h2>

@@ -16,7 +16,7 @@
     <link href="/bevy-website/atom.xml" rel="alternate" type="application/atom+xml" />
     <title>Bevy Book: ECS</title>
 
-    <script src="/optional-helpers.js"></script>
+    <script src="/bevy-website/optional-helpers.js"></script>
 
 </head>
 
@@ -27,11 +27,11 @@
             <div class="header__content">
                 <label class="main-menu-backdrop" for="mobile-menu-state"></label>
                 <label class="header__hamburger button-square button-square--header" for="mobile-menu-state">
-                    <img src="/assets/icon-hamburger.svg">
+                    <img src="/bevy-website/assets/icon-hamburger.svg">
                 </label>
                 <div class="header__left-block">
                     <a class="header__logo" href="/bevy-website/">
-                        <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                        <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                     </a>
                     <div class="header__message">
 
@@ -46,10 +46,10 @@
                     data-page-menu-switch-state-container>
                     <div class="main-menu__header">
                         <a href="/bevy-website/">
-                            <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                            <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                         </a>
                         <label class="button-square button-square--header" for="mobile-menu-state">
-                            <img src="/assets/icon-times.svg">
+                            <img src="/bevy-website/assets/icon-times.svg">
                         </label>
                     </div>
 
@@ -115,7 +115,8 @@
                                             href="&#x2F;learn&#x2F;book&#x2F;getting-started&#x2F;">Getting Started</a>
 
                                         <label class="tree-menu__toggle" for="mobile-menu-learn-book-getting-started">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -283,7 +284,8 @@
                                             href="&#x2F;learn&#x2F;book&#x2F;contributing&#x2F;">Contributing</a>
 
                                         <label class="tree-menu__toggle" for="mobile-menu-learn-book-contributing">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -494,9 +496,9 @@
                 </nav>
                 <div class="header__cta-container">
                     <a class="button button--pink header__cta" href="/bevy-website/community/donate">Donate <img
-                            class="button__icon" src="/assets/heart.svg" alt="heart icon" /></a>
+                            class="button__icon" src="/bevy-website/assets/heart.svg" alt="heart icon" /></a>
                     <a class="header__cta header__cta--github" href="https://github.com/bevyengine/bevy">
-                        <img src="/assets/github-mark-white.svg" alt="GitHub repo">
+                        <img src="/bevy-website/assets/github-mark-white.svg" alt="GitHub repo">
                     </a>
                 </div>
             </div>
@@ -556,7 +558,8 @@
                                             href="&#x2F;learn&#x2F;book&#x2F;getting-started&#x2F;">Getting Started</a>
 
                                         <label class="tree-menu__toggle" for="page-menu-learn-book-getting-started">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -723,7 +726,8 @@
                                             href="&#x2F;learn&#x2F;book&#x2F;contributing&#x2F;">Contributing</a>
 
                                         <label class="tree-menu__toggle" for="page-menu-learn-book-contributing">
-                                            <img class="tree-menu__chevron" src="/assets/icon-chevron-down.svg">
+                                            <img class="tree-menu__chevron"
+                                                src="/bevy-website/assets/icon-chevron-down.svg">
                                         </label>
 
                                     </div>
@@ -940,13 +944,15 @@
                                         up into <strong>Entities</strong>, <strong>Components</strong>, and
                                         <strong>Systems</strong>. <strong>Entities</strong> are unique
                                         &quot;things&quot; that are assigned groups of <strong>Components</strong>,
-                                        which are then processed using <strong>Systems</strong>.</p>
+                                        which are then processed using <strong>Systems</strong>.
+                                    </p>
                                     <p>For example, one entity might have a <code>Position</code> and
                                         <code>Velocity</code> component, whereas another entity might have a
                                         <code>Position</code> and <code>UI</code> component. Systems are logic that runs
                                         on a specific set of component types. You might have a <code>movement</code>
                                         system that runs on all entities with a <code>Position</code> and
-                                        <code>Velocity</code> component.</p>
+                                        <code>Velocity</code> component.
+                                    </p>
                                     <p>The ECS pattern encourages clean, decoupled designs by forcing you to break up
                                         your app data and logic into its core components. It also helps make your code
                                         faster by optimizing memory access patterns and making parallelism easier.</p>
@@ -960,7 +966,8 @@
                                     <ul>
                                         <li>
                                             <p><strong>Components</strong>: Rust structs that implement the
-                                                <code>Component</code> trait</p>
+                                                <code>Component</code> trait
+                                            </p>
                                             <pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-meta z-annotation z-rust"><span class="z-punctuation z-definition z-annotation z-rust">#</span><span class="z-punctuation z-section z-group z-begin z-rust">[</span><span class="z-variable z-annotation z-rust">derive</span><span class="z-meta z-annotation z-parameters z-rust"><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span></span><span class="z-meta z-annotation z-parameters z-rust"><span class="z-meta z-group z-rust">Component</span></span><span class="z-meta z-annotation z-parameters z-rust"><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-punctuation z-section z-group z-end z-rust">]</span></span>
 <span class="z-meta z-struct z-rust"><span class="z-storage z-type z-struct z-rust">struct</span> </span><span class="z-meta z-struct z-rust"><span class="z-entity z-name z-struct z-rust">Position</span> </span><span class="z-meta z-struct z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span> <span class="z-variable z-other z-member z-rust">x</span><span class="z-punctuation z-separator z-type z-rust">:</span> <span class="z-storage z-type z-rust">f32</span>, <span class="z-variable z-other z-member z-rust">y</span><span class="z-punctuation z-separator z-type z-rust">:</span> <span class="z-storage z-type z-rust">f32</span> </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span>
 </span></code></pre>
@@ -1039,7 +1046,8 @@
                                         , but we'll cover that more later.
                                     </p>
                                     <p>Now run your App again using <code>cargo run</code>. You should see
-                                        <code>hello world!</code> printed once in your terminal.</p>
+                                        <code>hello world!</code> printed once in your terminal.
+                                    </p>
                                     <h2 id="your-first-components">Your First Components
                                         <a class="anchor-link" href="#your-first-components">#</a>
                                     </h2>

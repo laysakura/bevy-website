@@ -16,7 +16,7 @@
     <link href="/bevy-website/atom.xml" rel="alternate" type="application/atom+xml" />
     <title>0.7 to 0.8</title>
 
-    <script src="/optional-helpers.js"></script>
+    <script src="/bevy-website/optional-helpers.js"></script>
 
 </head>
 
@@ -27,11 +27,11 @@
             <div class="header__content">
                 <label class="main-menu-backdrop" for="mobile-menu-state"></label>
                 <label class="header__hamburger button-square button-square--header" for="mobile-menu-state">
-                    <img src="/assets/icon-hamburger.svg">
+                    <img src="/bevy-website/assets/icon-hamburger.svg">
                 </label>
                 <div class="header__left-block">
                     <a class="header__logo" href="/bevy-website/">
-                        <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                        <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                     </a>
                     <div class="header__message">
 
@@ -46,10 +46,10 @@
                     data-page-menu-switch-state-container>
                     <div class="main-menu__header">
                         <a href="/bevy-website/">
-                            <img class="logo" src="/assets/bevy_logo_dark.svg" alt="Bevy Engine">
+                            <img class="logo" src="/bevy-website/assets/bevy_logo_dark.svg" alt="Bevy Engine">
                         </a>
                         <label class="button-square button-square--header" for="mobile-menu-state">
-                            <img src="/assets/icon-times.svg">
+                            <img src="/bevy-website/assets/icon-times.svg">
                         </label>
                     </div>
 
@@ -360,9 +360,9 @@
                 </nav>
                 <div class="header__cta-container">
                     <a class="button button--pink header__cta" href="/bevy-website/community/donate">Donate <img
-                            class="button__icon" src="/assets/heart.svg" alt="heart icon" /></a>
+                            class="button__icon" src="/bevy-website/assets/heart.svg" alt="heart icon" /></a>
                     <a class="header__cta header__cta--github" href="https://github.com/bevyengine/bevy">
-                        <img src="/assets/github-mark-white.svg" alt="GitHub repo">
+                        <img src="/bevy-website/assets/github-mark-white.svg" alt="GitHub repo">
                     </a>
                 </div>
             </div>
@@ -713,10 +713,12 @@
                                         have been added for convenience. If you were using a
                                         <code>TransformBundle</code> you should probably be using a <a
                                             href="https://docs.rs/bevy/0.8.0/bevy/prelude/struct.SpatialBundle.html"><code>SpatialBundle</code></a>
-                                        now.</p>
+                                        now.
+                                    </p>
                                     <p>If you were previously reading <code>Visibility::is_visible</code> as the
                                         &quot;actual visibility&quot; for sprites or lights, use
-                                        <code>ComputedVisibilty::is_visible()</code> instead:</p>
+                                        <code>ComputedVisibilty::is_visible()</code> instead:
+                                    </p>
                                     <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> 0.7
 </span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-rust"><span class="z-storage z-type z-function z-rust">fn</span> </span><span class="z-entity z-name z-function z-rust">system</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-begin z-rust">(</span><span class="z-variable z-parameter z-rust">query</span><span class="z-punctuation z-separator z-rust">:</span> <span class="z-meta z-generic z-rust">Query<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-keyword z-operator z-rust">&amp;</span>Visibility<span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-end z-rust">)</span></span></span></span><span class="z-meta z-function z-rust"> </span><span class="z-meta z-function z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
   <span class="z-keyword z-control z-rust">for</span> visibility <span class="z-keyword z-operator z-rust">in</span> query<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">iter</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
@@ -745,12 +747,14 @@
                                     <ul>
                                         <li>Replace <code>global_transform.translation</code> by
                                             <code>global_transform.translation()</code> (For other fields, use the
-                                            <code>compute_transform</code> method)</li>
+                                            <code>compute_transform</code> method)
+                                        </li>
                                         <li><code>GlobalTransform</code> do not support non-linear scales anymore, we'd
                                             like to hear from you if it is an inconvenience for you</li>
                                         <li>If you need the <code>scale</code>, <code>rotation</code> or
                                             <code>translation</code> property you can now use
-                                            <code>global_transform.to_scale_rotation_translation()</code></li>
+                                            <code>global_transform.to_scale_rotation_translation()</code>
+                                        </li>
                                     </ul>
                                     <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> 0.7
 </span><span class="z-storage z-type z-rust">let</span> transform <span class="z-keyword z-operator z-assignment z-rust">=</span> <span class="z-meta z-path z-rust">Transform<span class="z-punctuation z-accessor z-rust">::</span></span>from<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-keyword z-operator z-arithmetic z-rust">*</span>global_transform</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-terminator z-rust">;</span>
@@ -776,7 +780,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
 </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-terminator z-rust">;</span>
 </span></code></pre>
                                     <p>The scene will be spawned as a child of the entity with the
-                                        <code>SceneBundle</code></p>
+                                        <code>SceneBundle</code>
+                                    </p>
                                     <h3 id="make-scalingmode-more-flexible"><a
                                             href="https://github.com/bevyengine/bevy/pull/3253">Make ScalingMode more
                                             flexible</a>
@@ -785,14 +790,16 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                     <p>Adds ability to specify scaling factor for <code>WindowSize</code>, size of the
                                         fixed axis for <code>FixedVertical</code> and <code>FixedHorizontal</code> and a
                                         new <code>ScalingMode</code> that is a mix of <code>FixedVertical</code> and
-                                        <code>FixedHorizontal</code></p>
+                                        <code>FixedHorizontal</code>
+                                    </p>
                                     <h3 id="allow-closing-windows-at-runtime"><a
                                             href="https://github.com/bevyengine/bevy/pull/3575">Allow closing windows at
                                             runtime</a>
                                         <a class="anchor-link" href="#allow-closing-windows-at-runtime">#</a>
                                     </h3>
                                     <p><code>bevy::input::system::exit_on_esc_system</code> has been removed. Use
-                                        <code>bevy::window::close_on_esc</code> instead.</p>
+                                        <code>bevy::window::close_on_esc</code> instead.
+                                    </p>
                                     <p><code>CloseWindow</code> has been removed. Use <code>Window::close</code>
                                         instead.
                                         The Close variant has been added to <code>WindowCommand</code>. Handle this by
@@ -805,7 +812,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                     <p>The run criterion <code>RunOnce</code>, which would make the controlled systems
                                         run only once, has been replaced with a new run criterion function
                                         ShouldRun::once. Replace all instances of RunOnce with
-                                        <code>ShouldRun::once</code>.</p>
+                                        <code>ShouldRun::once</code>.
+                                    </p>
                                     <h3
                                         id="move-system-param-fetch-struct-into-anonymous-scope-to-avoid-name-collisions">
                                         <a href="https://github.com/bevyengine/bevy/pull/4100">Move system_param fetch
@@ -856,11 +864,14 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                     <ul>
                                         <li>Time related types (e.g. <code>Time</code>, <code>Timer</code>,
                                             <code>Stopwatch</code>, <code>FixedTimestep</code>, etc.) should be imported
-                                            from <code>bevy::time::*</code> rather than <code>bevy::core::*</code>.</li>
+                                            from <code>bevy::time::*</code> rather than <code>bevy::core::*</code>.
+                                        </li>
                                         <li>If you were adding <code>CorePlugin</code> manually, you'll also want to add
-                                            <code>TimePlugin</code> from <code>bevy::time</code>.</li>
+                                            <code>TimePlugin</code> from <code>bevy::time</code>.
+                                        </li>
                                         <li>The <code>bevy::core::CorePlugin::Time</code> system label is replaced with
-                                            <code>bevy::time::TimeSystem</code>.</li>
+                                            <code>bevy::time::TimeSystem</code>.
+                                        </li>
                                     </ul>
                                     <h3 id="move-float-ord-from-bevy-core-to-bevy-utils"><a
                                             href="https://github.com/bevyengine/bevy/pull/4189">Move float_ord from
@@ -868,7 +879,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                         <a class="anchor-link" href="#move-float-ord-from-bevy-core-to-bevy-utils">#</a>
                                     </h3>
                                     <p>Replace imports of <code>bevy::core::FloatOrd</code> with
-                                        <code>bevy::utils::FloatOrd</code>.</p>
+                                        <code>bevy::utils::FloatOrd</code>.
+                                    </p>
                                     <h3 id="move-rect-to-bevy-ui-and-rename-it-to-uirect"><a
                                             href="https://github.com/bevyengine/bevy/pull/4276">Move Rect to bevy_ui and
                                             rename it to UiRect</a>
@@ -890,7 +902,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                             href="#improve-docs-and-naming-for-rawwindowhandle-functionality">#</a>
                                     </h3>
                                     <p>Renamed <code>HasRawWindowHandleWrapper</code> to
-                                        <code>ThreadLockedRawWindowHandleWrapper</code>.</p>
+                                        <code>ThreadLockedRawWindowHandleWrapper</code>.
+                                    </p>
                                     <h3 id="migrate-to-encase-from-crevice"><a
                                             href="https://github.com/bevyengine/bevy/pull/4339">Migrate to encase from
                                             crevice</a>
@@ -921,7 +934,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                     <ul>
                                         <li>removed <code>set_body()</code>, <code>values()</code>,
                                             <code>values_mut()</code>, <code>clear()</code>, <code>push()</code>,
-                                            <code>append()</code></li>
+                                            <code>append()</code>
+                                        </li>
                                         <li>added <code>set()</code>, <code>get()</code>, <code>get_mut()</code></li>
                                     </ul>
                                     <h4 id="uniformvec-uniformbuffer">UniformVec -&gt; UniformBuffer
@@ -931,7 +945,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                         <li>renamed <code>uniform_buffer()</code> to <code>buffer()</code></li>
                                         <li>removed <code>len()</code>, <code>is_empty()</code>,
                                             <code>capacity()</code>, <code>push()</code>, <code>reserve()</code>,
-                                            <code>clear()</code>, <code>values()</code></li>
+                                            <code>clear()</code>, <code>values()</code>
+                                        </li>
                                         <li>added <code>set()</code>, <code>get()</code></li>
                                     </ul>
                                     <h4 id="dynamicuniformvec-dynamicuniformbuffer">DynamicUniformVec -&gt;
@@ -949,14 +964,16 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                             href="#make-paused-timers-update-just-finished-on-tick">#</a>
                                     </h3>
                                     <p><code>Timer::times_finished</code> has been renamed to
-                                        <code>Timer::times_finished_this_tick</code> for clarity.</p>
+                                        <code>Timer::times_finished_this_tick</code> for clarity.
+                                    </p>
                                     <h3 id="change-default-image-filtermode-to-linear"><a
                                             href="https://github.com/bevyengine/bevy/pull/4465">Change default Image
                                             FilterMode to Linear</a>
                                         <a class="anchor-link" href="#change-default-image-filtermode-to-linear">#</a>
                                     </h3>
                                     <p>Default <code>Image</code> filtering changed from <code>Nearest</code> to
-                                        <code>Linear</code>.</p>
+                                        <code>Linear</code>.
+                                    </p>
                                     <pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> 0.7
 </span>
 <span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> Nothing, nearest was the default
@@ -966,7 +983,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
     <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">insert_resource</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-meta z-path z-rust">ImageSettings<span class="z-punctuation z-accessor z-rust">::</span></span>default_nearest<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
 </span></code></pre>
                                     <p><code>Image.sampler_descriptor</code> has been changed to use
-                                        <code>ImageSampler</code> instead of <code>SamplerDescriptor</code>.</p>
+                                        <code>ImageSampler</code> instead of <code>SamplerDescriptor</code>.
+                                    </p>
                                     <pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> 0.7
 </span>texture<span class="z-punctuation z-accessor z-dot z-rust">.</span>sampler_descriptor <span class="z-keyword z-operator z-assignment z-rust">=</span> SamplerDescriptor <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
     address_mode_u<span class="z-punctuation z-separator z-rust">:</span> <span class="z-meta z-path z-rust">AddressMode<span class="z-punctuation z-accessor z-rust">::</span></span>Repeat<span class="z-punctuation z-separator z-rust">,</span>
@@ -988,7 +1006,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                     <p>You can no longer use <code>.system()</code>. It was deprecated in 0.7.0. You can
                                         just remove the method call.</p>
                                     <p>If you needed this for tests purposes, you can use
-                                        <code>bevy_ecs::system::assert_is_system</code> instead.</p>
+                                        <code>bevy_ecs::system::assert_is_system</code> instead.
+                                    </p>
                                     <h3 id="change-gamepad-rs-tuples-to-normal-structs"><a
                                             href="https://github.com/bevyengine/bevy/pull/4519">Change gamepad.rs tuples
                                             to normal structs</a>
@@ -998,14 +1017,16 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                         <code>GamepadEvent</code> and <code>GamepadEventRaw</code> types are now normal
                                         structs instead of tuple structs and have a <code>new</code> function.
                                         To migrate change every instantiation to use the <code>new()</code> function
-                                        instead and use the appropriate field names instead of .0 and .1.</p>
+                                        instead and use the appropriate field names instead of .0 and .1.
+                                    </p>
                                     <h3 id="remove-entitymut-get-unchecked"><a
                                             href="https://github.com/bevyengine/bevy/pull/4547">Remove
                                             EntityMut::get_unchecked</a>
                                         <a class="anchor-link" href="#remove-entitymut-get-unchecked">#</a>
                                     </h3>
                                     <p>Replace calls to <code>EntityMut::get_unchecked</code> with calls to
-                                        <code>EntityMut::get</code>.</p>
+                                        <code>EntityMut::get</code>.
+                                    </p>
                                     <h3 id="replace-readonlyfetch-with-readonlyworldquery"><a
                                             href="https://github.com/bevyengine/bevy/pull/4626">Replace ReadOnlyFetch
                                             with ReadOnlyWorldQuery</a>
@@ -1015,26 +1036,32 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                     <p>The trait <code>ReadOnlyFetch</code> has been replaced with
                                         <code>ReadOnlyWorldQuery</code> along with the
                                         <code>WorldQueryGats::ReadOnlyFetch</code> assoc type which has been replaced
-                                        with <code>&lt;WorldQuery::ReadOnly as WorldQueryGats&gt;::Fetch</code></p>
+                                        with <code>&lt;WorldQuery::ReadOnly as WorldQueryGats&gt;::Fetch</code>
+                                    </p>
                                     <p>The trait <code>ReadOnlyFetch</code> has been replaced with
                                         <code>ReadOnlyWorldQuery</code> along with the
                                         <code>WorldQueryGats::ReadOnlyFetch</code> assoc type which has been replaced
-                                        with <code>&lt;WorldQuery::ReadOnly as WorldQueryGats&gt;::Fetch</code></p>
+                                        with <code>&lt;WorldQuery::ReadOnly as WorldQueryGats&gt;::Fetch</code>
+                                    </p>
                                     <ul>
                                         <li>Any where clauses such as <code>QueryFetch&lt;Q&gt;: ReadOnlyFetch</code>
                                             should be replaced with <code>Q: ReadOnlyWorldQuery</code>.</li>
                                         <li>Any custom world query impls should implement
-                                            <code>ReadOnlyWorldQuery</code> instead of <code>ReadOnlyFetch</code></li>
+                                            <code>ReadOnlyWorldQuery</code> instead of <code>ReadOnlyFetch</code>
+                                        </li>
                                     </ul>
                                     <p>Functions <code>update_component_access</code> and
                                         <code>update_archetype_component_access</code> have been moved from the
-                                        <code>FetchState</code> trait to <code>WorldQuery</code></p>
+                                        <code>FetchState</code> trait to <code>WorldQuery</code>
+                                    </p>
                                     <ul>
                                         <li>Any callers should now call <code>Q::update_component_access(state</code>
                                             instead of <code>state.update_component_access</code> (and
-                                            <code>update_archetype_component_access</code> respectively)</li>
+                                            <code>update_archetype_component_access</code> respectively)
+                                        </li>
                                         <li>Any custom world query impls should move the functions from the
-                                            <code>FetchState</code> impl to <code>WorldQuery</code> impl</li>
+                                            <code>FetchState</code> impl to <code>WorldQuery</code> impl
+                                        </li>
                                     </ul>
                                     <p><code>WorldQuery</code> has been made an <code>unsafe trait</code>,
                                         <code>FetchState</code> has been made a safe <code>trait</code>. (I think this
@@ -1043,10 +1070,12 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                     </p>
                                     <ul>
                                         <li>If you have a custom <code>FetchState</code> impl make it a normal
-                                            <code>impl</code> instead of <code>unsafe impl</code></li>
+                                            <code>impl</code> instead of <code>unsafe impl</code>
+                                        </li>
                                         <li>If you have a custom <code>WorldQuery</code> impl make it an
                                             <code>unsafe impl</code>, if your code was sound before it is going to still
-                                            be sound</li>
+                                            be sound
+                                        </li>
                                     </ul>
                                     <h3 id="fix-unsoundness-with-or-anyof-option-component-access"><a
                                             href="https://github.com/bevyengine/bevy/pull/4659">Fix unsoundness with
@@ -1066,7 +1095,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                     </h3>
                                     <p>The <code>task_pool</code> parameter for
                                         <code>Query(State)::par_for_each(_mut)</code> has been removed. Remove these
-                                        parameters from all calls to these functions.</p>
+                                        parameters from all calls to these functions.
+                                    </p>
                                     <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> 0.7
 </span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-rust"><span class="z-storage z-type z-function z-rust">fn</span> </span><span class="z-entity z-name z-function z-rust">parallel_system</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-begin z-rust">(</span>
    <span class="z-variable z-parameter z-rust">task_pool</span><span class="z-punctuation z-separator z-rust">:</span> <span class="z-meta z-generic z-rust">Res<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span>ComputeTaskPool<span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span>,
@@ -1086,7 +1116,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
 </span></code></pre>
                                     <p>If using <code>Query</code> or <code>QueryState</code> outside of a system run by
                                         the scheduler, you may need to manually configure and initialize a
-                                        <code>ComputeTaskPool</code> as a resource in the <code>World</code>.</p>
+                                        <code>ComputeTaskPool</code> as a resource in the <code>World</code>.
+                                    </p>
                                     <h3 id="fail-to-compile-on-16-bit-platforms"><a
                                             href="https://github.com/bevyengine/bevy/pull/4736">Fail to compile on
                                             16-bit platforms</a>
@@ -1109,7 +1140,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                     <ul>
                                         <li>a <code>HandleId</code>, use <code>&amp;Handle::weak(id)</code> instead, to
                                             create a weak handle. You may have been able to store a type safe
-                                            <code>Handle</code> instead.</li>
+                                            <code>Handle</code> instead.
+                                        </li>
                                         <li>a <code>HandleUntyped</code>, use
                                             <code>&amp;handle_untyped.typed_weak()</code> to create a weak handle of the
                                             specified type. This is most likely to be the useful when using <a
@@ -1121,7 +1153,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                         <li>a <code>Handle&lt;U&gt;</code> of of a different type, consider whether this
                                             is the correct handle type to store. If it is (i.e. the same handle id is
                                             used for multiple different Asset types) use
-                                            <code>Handle::weak(handle.id)</code> to cast to a different type.</li>
+                                            <code>Handle::weak(handle.id)</code> to cast to a different type.
+                                        </li>
                                     </ul>
                                     <h3 id="allow-higher-order-systems"><a
                                             href="https://github.com/bevyengine/bevy/pull/4833">Allow higher order
@@ -1158,28 +1191,32 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                     <p>In shaders for 3D meshes:</p>
                                     <ul>
                                         <li><code>#import bevy_pbr::mesh_view_bind_group</code> -&gt;
-                                            <code>#import bevy_pbr::mesh_view_bindings</code></li>
+                                            <code>#import bevy_pbr::mesh_view_bindings</code>
+                                        </li>
                                         <li><code>#import bevy_pbr::mesh_struct</code> -&gt;
                                             <code>#import bevy_pbr::mesh_types</code>
                                             <ul>
                                                 <li>NOTE: If you are using the mesh bind group at bind group index 2,
                                                     you can remove those binding statements in your shader and just use
                                                     <code>#import bevy_pbr::mesh_bindings</code> which itself imports
-                                                    the mesh types needed for the bindings.</li>
+                                                    the mesh types needed for the bindings.
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
                                     <p>In shaders for 2D meshes:</p>
                                     <ul>
                                         <li><code>#import bevy_sprite::mesh2d_view_bind_group</code> -&gt;
-                                            <code>#import bevy_sprite::mesh2d_view_bindings</code></li>
+                                            <code>#import bevy_sprite::mesh2d_view_bindings</code>
+                                        </li>
                                         <li><code>#import bevy_sprite::mesh2d_struct</code> -&gt;
                                             <code>#import bevy_sprite::mesh2d_types</code>
                                             <ul>
                                                 <li>NOTE: If you are using the mesh2d bind group at bind group index 2,
                                                     you can remove those binding statements in your shader and just use
                                                     <code>#import bevy_sprite::mesh2d_bindings</code> which itself
-                                                    imports the mesh2d types needed for the bindings.</li>
+                                                    imports the mesh2d types needed for the bindings.
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -1189,7 +1226,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                         <a class="anchor-link" href="#camera-driven-viewports">#</a>
                                     </h3>
                                     <p><code>Camera::projection_matrix</code> is no longer a public field. Use the new
-                                        <code>Camera::projection_matrix()</code> method instead:</p>
+                                        <code>Camera::projection_matrix()</code> method instead:
+                                    </p>
                                     <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> 0.7
 </span><span class="z-storage z-type z-rust">let</span> projection <span class="z-keyword z-operator z-assignment z-rust">=</span> camera<span class="z-punctuation z-accessor z-dot z-rust">.</span>projection_matrix<span class="z-punctuation z-terminator z-rust">;</span>
 
@@ -1216,7 +1254,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                             and <code>any_mut</code> to <code>as_any</code> and <code>as_mut_any</code>.
                                         </li>
                                         <li>Calls to <code>any</code>/<code>any_mut</code> must be changed to
-                                            <code>as_any</code>/<code>as_mut_any</code></li>
+                                            <code>as_any</code>/<code>as_mut_any</code>
+                                        </li>
                                     </ul>
                                     <h3 id="mark-mutable-apis-under-ecs-storage-as-pub-crate"><a
                                             href="https://github.com/bevyengine/bevy/pull/5065">Mark mutable APIs under
@@ -1260,11 +1299,13 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                                 <li>No more output generics.</li>
                                                 <li>Method <code>as_system_label</code> now returns
                                                     <code>SystemLabelId</code>, removing an unnecessary level of
-                                                    indirection.</li>
+                                                    indirection.
+                                                </li>
                                             </ul>
                                         </li>
                                         <li>If you <em>need</em> a label that is determined at runtime, you can use
-                                            <code>Box::leak</code>. Not recommended.</li>
+                                            <code>Box::leak</code>. Not recommended.
+                                        </li>
                                     </ul>
                                     <h3 id="move-get-short-name-utility-method-from-bevy-reflect-into-bevy-utils"><a
                                             href="https://github.com/bevyengine/bevy/pull/5174">Move get_short_name
@@ -1291,7 +1332,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                         <a class="anchor-link" href="#add-reflection-for-resources">#</a>
                                     </h3>
                                     <p>Rename <code>ReflectComponent::add_component</code> into
-                                        <code>ReflectComponent::insert_component</code>.</p>
+                                        <code>ReflectComponent::insert_component</code>.
+                                    </p>
                                     <h3 id="make-reflect-partial-eq-return-more-accurate-results"><a
                                             href="https://github.com/bevyengine/bevy/pull/5210">Make reflect_partial_eq
                                             return more accurate results</a>
@@ -1301,7 +1343,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                     <p>Previously, all <code>reflect_***_partial_eq</code> helper methods returned
                                         <code>Some(false)</code> when the comparison could not be performed, which was
                                         misleading. They now return <code>None</code> when the comparison cannot be
-                                        performed.</p>
+                                        performed.
+                                    </p>
                                     <h3 id="make-renderstage-extract-run-on-the-render-world"><a
                                             href="https://github.com/bevyengine/bevy/pull/4402">Make
                                             RenderStage::Extract run on the render world</a>
@@ -1316,7 +1359,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                         <code>Query</code> etc.).
                                         It will extract this from the main world.
                                         Note that <code>Commands</code> will not work correctly in <code>Extract</code>
-                                        - it will currently silently do nothing.</p>
+                                        - it will currently silently do nothing.
+                                    </p>
                                     <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-comment z-line z-double-slash z-rust"><span class="z-punctuation z-definition z-comment z-rust">//</span> 0.7
 </span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-rust"><span class="z-storage z-type z-function z-rust">fn</span> </span><span class="z-entity z-name z-function z-rust">extract_clouds</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-begin z-rust">(</span><span class="z-storage z-modifier z-rust">mut</span> <span class="z-variable z-parameter z-rust">commands</span><span class="z-punctuation z-separator z-rust">:</span> Commands, <span class="z-variable z-parameter z-rust">clouds</span><span class="z-punctuation z-separator z-rust">:</span> <span class="z-meta z-generic z-rust">Query<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span>Entity, <span class="z-meta z-generic z-rust">With<span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span>Cloud<span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-end z-rust">)</span></span></span></span><span class="z-meta z-function z-rust"> </span><span class="z-meta z-function z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
     <span class="z-keyword z-control z-rust">for</span> cloud <span class="z-keyword z-operator z-rust">in</span> clouds<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">iter</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
@@ -1339,7 +1383,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
 </span></code></pre>
                                     <p>Because extraction now runs in the render world, usage of
                                         <code>Res&lt;RenderWorld&gt;</code> in the main world, should be replaced with
-                                        usage of <code>Res&lt;MainWorld&gt;</code> in the render world.</p>
+                                        usage of <code>Res&lt;MainWorld&gt;</code> in the render world.
+                                    </p>
                                     <p>Please note that all existing extract systems need to be updated to match this
                                         new style; even if they currently compile they will not run as expected. A
                                         warning will be emitted on a best-effort basis if this is not met.</p>
@@ -1359,9 +1404,11 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                     <p>Changed the following fields</p>
                                     <ul>
                                         <li><code>WindowCommand::SetWindowMode.resolution</code> from
-                                            <code>(u32, u32)</code> to <code>UVec2</code></li>
+                                            <code>(u32, u32)</code> to <code>UVec2</code>
+                                        </li>
                                         <li><code>WindowCommand::SetResolution.logical_resolution</code> from
-                                            <code>(f32, f32)</code> to <code>Vec2</code></li>
+                                            <code>(f32, f32)</code> to <code>Vec2</code>
+                                        </li>
                                     </ul>
                                     <h3 id="full-documentation-for-bevy-asset"><a
                                             href="https://github.com/bevyengine/bevy/pull/3536">Full documentation for
@@ -1369,12 +1416,14 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                         <a class="anchor-link" href="#full-documentation-for-bevy-asset">#</a>
                                     </h3>
                                     <p>Rename <code>FileAssetIo::get_root_path</code> to
-                                        <code>FileAssetIo::get_base_path</code></p>
+                                        <code>FileAssetIo::get_base_path</code>
+                                    </p>
                                     <p><code>FileAssetIo::root_path()</code> is a getter for the <code>root_path</code>
                                         field, while <code>FileAssetIo::get_root_path</code> returned the parent
                                         directory of the asset root path, which was the executable's directory unless
                                         <code>CARGO_MANIFEST_DIR</code> was set. This change solves the ambiguity
-                                        between the two methods.</p>
+                                        between the two methods.
+                                    </p>
                                     <h3 id="hierarchy-commandization"><a
                                             href="https://github.com/bevyengine/bevy/pull/4197">Hierarchy
                                             commandization</a>
@@ -1413,7 +1462,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                         <code>Vec&lt;T&gt;</code>, <code>HashMap&lt;K, V&gt;</code> will no longer
                                         insert <code>ReflectSerialize</code> and <code>ReflectDeserialize</code> type
                                         data. Instead you need to register it separately for concrete generic types like
-                                        so:</p>
+                                        so:
+                                    </p>
                                     <pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust">    <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-meta z-path z-rust">register_type<span class="z-punctuation z-accessor z-rust">::</span></span><span class="z-meta z-generic z-rust"><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-meta z-generic z-rust"><span class="z-support z-type z-rust">Option</span><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-support z-type z-rust">String</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
     <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-meta z-path z-rust">register_type_data<span class="z-punctuation z-accessor z-rust">::</span></span><span class="z-meta z-generic z-rust"><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-meta z-generic z-rust"><span class="z-support z-type z-rust">Option</span><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-support z-type z-rust">String</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span>, ReflectSerialize<span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
     <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-meta z-path z-rust">register_type_data<span class="z-punctuation z-accessor z-rust">::</span></span><span class="z-meta z-generic z-rust"><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-meta z-generic z-rust"><span class="z-support z-type z-rust">Option</span><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-support z-type z-rust">String</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span>, ReflectDeserialize<span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
@@ -1451,7 +1501,8 @@ transform<span class="z-punctuation z-accessor z-dot z-rust">.</span>translation
                                             href="#add-querystate-get-single-unchecked-manual-and-its-family">#</a>
                                     </h3>
                                     <p>Change <code>system::QuerySingleError</code> to
-                                        <code>query::QuerySingleError</code></p>
+                                        <code>query::QuerySingleError</code>
+                                    </p>
                                     <h3 id="tracing-tracy-updated-from-0-8-0-to-0-10-0"><a
                                             href="https://github.com/bevyengine/bevy/pull/4991">tracing-tracy updated
                                             from 0.8.0 to 0.10.0</a>
