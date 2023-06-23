@@ -1,3 +1,20 @@
+bevymarkのWASMサイズを縮小することで高速化することを実証するためのfork。
+
+<https://github.com/laysakura/bevy> と連携して動く。
+
+main ブランチのスクリプトで .wasm と bindingコードの .js をビルドし、それを gh-pages ブランチにコミットする。
+主にドキュメントルートを `https://laysakura.github.io/bevy-website/` にするために、 gh-pages ブランチは直接編集もしている。
+
+mainブランチでのビルドは以下。
+
+```console
+% cd generate-wasm-examples
+% ./generate_wasm_examples.sh
+% ll -h  bevy/target/wasm32-unknown-unknown/wasm-release/examples/bevymark.wasm ../content/examples/stress-tests//bevymark/bevymark.js
+-rw-r--r--@ 1 sho.nakatani  staff   3.2K  6 23 11:50 ../content/examples/stress-tests//bevymark/bevymark.js
+-rwxr-xr-x@ 1 sho.nakatani  staff   872K  6 23 11:50 bevy/target/wasm32-unknown-unknown/wasm-release/examples/bevymark.wasm
+```
+
 # Bevy Website
 
 The source files for <https://bevyengine.org>. This includes official Bevy news and docs, so if you would like to contribute feel free to create a pull request!

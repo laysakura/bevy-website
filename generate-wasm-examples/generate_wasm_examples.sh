@@ -41,10 +41,10 @@ add_category()
         if [ -f "$example_file" ]; then
             echo "$example_file already exists."
         else
-            cargo build --release --target wasm32-unknown-unknown --example $example
+            cargo build --profile wasm-release --target wasm32-unknown-unknown --example $example
         fi
 
-        wasm-bindgen --out-dir $category_dir/$example_slug --no-typescript --target web target/wasm32-unknown-unknown/release/examples/$example.wasm
+        wasm-bindgen --out-dir $category_dir/$example_slug --no-typescript --target web target/wasm32-unknown-unknown/wasm-release/examples/$example.wasm
 
         # Patch generated JS to allow to inject custom `fetch` with loading feedback.
         # See: https://github.com/bevyengine/bevy-website/pull/355
@@ -95,12 +95,4 @@ category_weight=0
 # - first param: the label that will show on the website
 # - second param: `bevy/examples/???` folder name
 # - rest params: space separated list of example files within the folder that want to be used
-add_category 2D 2d sprite sprite_flipping sprite_sheet text2d mesh2d mesh2d_manual 2d_shapes
-add_category 3D 3d 3d_scene lighting load_gltf orthographic parenting pbr spherical_area_lights texture update_gltf_scene 3d_shapes
-add_category UI ui button text text_debug ui
-add_category Audio audio audio
-add_category Shader shader shader_instancing shader_material_glsl shader_material
-add_category ECS ecs iter_combinations
-add_category Tools tools gamepad_viewer
-add_category Games games breakout alien_cake_addict
 add_category "Stress Tests" stress_tests bevymark
