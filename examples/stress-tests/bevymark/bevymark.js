@@ -1893,7 +1893,7 @@ async function __wbg_init(input) {
     }
     const imports = __wbg_get_imports();
     const env = {
-        BEVY_ASSET_ROOT: "assets/examples",
+        BEVY_ASSET_ROOT: "bevy-website/assets/examples",
     };    
     imports.env = env;
 
