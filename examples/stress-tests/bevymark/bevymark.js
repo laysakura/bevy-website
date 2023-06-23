@@ -1889,7 +1889,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('bevymark_bg.wasm', import.meta.url); // 多分ここを書き換えるべき
+        input = new URL('bevymark_bg.wasm', "/bevy-website/"); // 多分ここを書き換えるべき
     }
     const imports = __wbg_get_imports();
 
