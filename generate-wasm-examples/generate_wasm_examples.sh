@@ -1,4 +1,5 @@
 #!/bin/sh
+set -eux
 
 ./clone_bevy.sh
 
@@ -43,9 +44,13 @@ add_category()
         fi
 
         cargo build --profile wasm-release --target wasm32-unknown-unknown --example $example
+
+        # さらなるサイズ圧縮
+        ## wasm-optすると、wasm-bindgenにおいて <https://github.com/rustwasm/wasm-bindgen/issues/2784> と同種のpanicになりNG
+        # wasm-opt -Oz -o target/wasm32-unknown-unknown/wasm-release/examples/$example-opt.wasm target/wasm32-unknown-unknown/wasm-release/examples/$example.wasm
+        # mv -f target/wasm32-unknown-unknown/wasm-release/examples/$example-opt.wasm target/wasm32-unknown-unknown/wasm-release/examples/$example.wasm
+
         wasm-bindgen --out-dir $category_dir/$example_slug --no-typescript --target web target/wasm32-unknown-unknown/wasm-release/examples/$example.wasm
-        # cargo build --release --target wasm32-unknown-unknown --example $example
-        # wasm-bindgen --out-dir $category_dir/$example_slug --no-typescript --target web target/wasm32-unknown-unknown/release/examples/$example.wasm
 
         # Patch generated JS to allow to inject custom `fetch` with loading feedback.
         # See: https://github.com/bevyengine/bevy-website/pull/355
