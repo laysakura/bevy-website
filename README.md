@@ -10,9 +10,17 @@ mainブランチでのビルドは以下。
 ```console
 % cd generate-wasm-examples
 % ./generate_wasm_examples.sh
-% ll -h  bevy/target/wasm32-unknown-unknown/wasm-release/examples/bevymark.wasm ../content/examples/stress-tests//bevymark/bevymark.js
--rw-r--r--@ 1 sho.nakatani  staff   3.2K  6 23 11:50 ../content/examples/stress-tests//bevymark/bevymark.js
--rwxr-xr-x@ 1 sho.nakatani  staff   872K  6 23 11:50 bevy/target/wasm32-unknown-unknown/wasm-release/examples/bevymark.wasm
+% cd ..
+% ll -h content/examples/stress-tests/bevymark/bevymark{.js,_bg.wasm}
+-rw-r--r--@ 1 sho.nakatani  staff    67K  6 23 12:28 content/examples/stress-tests/bevymark/bevymark.js
+-rw-r--r--@ 1 sho.nakatani  staff   8.7M  6 23 12:28 content/examples/stress-tests/bevymark/bevymark_bg.wasm
+```
+
+gh-pages ブランチでのコピー
+
+```console
+% git checkout gh-pages
+% cp content/examples/stress-tests/bevymark/bevymark{.js,_bg.wasm} examples/stress-tests/bevymark/
 ```
 
 # Bevy Website
