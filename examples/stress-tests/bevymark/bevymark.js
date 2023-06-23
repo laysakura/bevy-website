@@ -1892,6 +1892,10 @@ async function __wbg_init(input) {
         input = new URL('examples/stress-tests/bevymark/bevymark_bg.wasm', "https://laysakura.github.io/bevy-website/"); // 多分ここを書き換えるべき
     }
     const imports = __wbg_get_imports();
+    const env = {
+        BEVY_ASSET_ROOT: "assets/examples",
+    };    
+    imports.env = env;
 
     if (typeof input === 'string' || (typeof Request === 'function' && input instanceof Request) || (typeof URL === 'function' && input instanceof URL)) {
         input = window.bevyLoadingBarFetch(input);
