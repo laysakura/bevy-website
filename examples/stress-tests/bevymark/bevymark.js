@@ -1889,7 +1889,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('examples/stress-tests/bevymark/bevymark_bg.wasm/bevymark_bg.wasm', "https://laysakura.github.io/bevy-website/"); // 多分ここを書き換えるべき
+        input = new URL('examples/stress-tests/bevymark/bevymark_bg.wasm', "https://laysakura.github.io/bevy-website/"); // 多分ここを書き換えるべき
     }
     const imports = __wbg_get_imports();
 
