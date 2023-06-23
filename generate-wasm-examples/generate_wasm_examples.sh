@@ -42,10 +42,10 @@ add_category()
             rm $example_file
         fi
 
-        # cargo build --profile wasm-release --target wasm32-unknown-unknown --example $example
-        # wasm-bindgen --out-dir $category_dir/$example_slug --no-typescript --target web target/wasm32-unknown-unknown/wasm-release/examples/$example.wasm
-        cargo build --release --target wasm32-unknown-unknown --example $example
-        wasm-bindgen --out-dir $category_dir/$example_slug --no-typescript --target web target/wasm32-unknown-unknown/release/examples/$example.wasm
+        cargo build --profile wasm-release --target wasm32-unknown-unknown --example $example
+        wasm-bindgen --out-dir $category_dir/$example_slug --no-typescript --target web target/wasm32-unknown-unknown/wasm-release/examples/$example.wasm
+        # cargo build --release --target wasm32-unknown-unknown --example $example
+        # wasm-bindgen --out-dir $category_dir/$example_slug --no-typescript --target web target/wasm32-unknown-unknown/release/examples/$example.wasm
 
         # Patch generated JS to allow to inject custom `fetch` with loading feedback.
         # See: https://github.com/bevyengine/bevy-website/pull/355
